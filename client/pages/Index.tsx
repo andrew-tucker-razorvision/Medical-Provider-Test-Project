@@ -298,9 +298,11 @@ export default function Index() {
 
             {/* Image */}
             <div>
-              <div className="relative w-full h-80 bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl shadow-xl overflow-hidden flex items-center justify-center">
-                <Stethoscope className="w-32 h-32 text-teal opacity-20" />
-              </div>
+              <img
+                src="https://images.pexels.com/photos/6129037/pexels-photo-6129037.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Medical provider in healthcare workspace with modern technology"
+                className="w-full h-80 object-cover rounded-xl shadow-xl"
+              />
             </div>
           </div>
         </div>
