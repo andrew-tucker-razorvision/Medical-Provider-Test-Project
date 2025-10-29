@@ -123,9 +123,11 @@ export default function Index() {
 
             {/* Right Side Illustration */}
             <div className="hidden md:flex items-center justify-center min-h-96">
-              <div className="relative w-full max-w-sm h-96 bg-gradient-to-br from-teal via-blue-400 to-orange rounded-lg shadow-2xl opacity-20 flex items-center justify-center">
-                <div className="text-6xl">🤝</div>
-              </div>
+              <img
+                src="https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Professional handshake between attorneys and medical providers"
+                className="w-full max-w-md h-96 object-cover rounded-lg shadow-2xl"
+              />
             </div>
           </div>
         </div>
