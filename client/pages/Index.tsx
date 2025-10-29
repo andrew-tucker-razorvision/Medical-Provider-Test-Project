@@ -240,7 +240,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 4: FOR ATTORNEYS */}
-      <section id="for-attorneys" className="py-20 md:py-32 bg-white">
+      <section id="for-attorneys" className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image */}
@@ -288,7 +288,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 5: FOR PROVIDERS */}
-      <section id="for-providers" className="py-20 md:py-32 bg-light-gray">
+      <section id="for-providers" className="py-12 md:py-20 bg-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Text */}
@@ -336,7 +336,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 6: TESTIMONIALS */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-16">
@@ -417,7 +417,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 7: DUAL CTA */}
-      <section className="py-20 md:py-32 bg-gradient-to-r from-navy to-navy-dark">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-navy to-navy-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-16">
