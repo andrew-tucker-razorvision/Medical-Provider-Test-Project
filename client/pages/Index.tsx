@@ -339,7 +339,7 @@ export default function Index() {
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
               Trusted by Legal and Medical Professionals
             </h2>
