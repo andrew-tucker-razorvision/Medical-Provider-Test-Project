@@ -218,9 +218,11 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="order-2 md:order-1">
-              <div className="relative w-full h-80 bg-gradient-to-br from-blue-100 to-teal-100 rounded-xl shadow-xl overflow-hidden flex items-center justify-center">
-                <Briefcase className="w-32 h-32 text-navy opacity-20" />
-              </div>
+              <img
+                src="https://images.pexels.com/photos/6077797/pexels-photo-6077797.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Law office with justice scales and attorney workspace"
+                className="w-full h-80 object-cover rounded-xl shadow-xl"
+              />
             </div>
 
             {/* Text */}
