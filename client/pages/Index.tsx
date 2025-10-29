@@ -74,14 +74,17 @@ export default function Index() {
   return (
     <div className="bg-white">
       {/* SECTION 1: HERO */}
-      <section className="pt-8 pb-20 md:pb-0 md:min-h-screen flex items-center bg-gradient-to-br from-white via-white to-light-gray">
+      <section className="pt-8 pb-16 md:pb-20 bg-gradient-to-br from-white via-white to-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+          {/* Full Width Title */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-12 md:mb-16">
+            Connect Personal Injury Attorneys with Trusted Medical Providers Instantly
+          </h1>
+
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start lg:items-center">
             {/* Left Side Text */}
             <div className="lg:col-span-2">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-6">
-                Connect Personal Injury Attorneys with Trusted Medical Providers Instantly
-              </h1>
               <p className="text-lg text-charcoal mb-6 leading-relaxed">
                 Streamline case management and improve client outcomes with our vetted network of medical professionals specializing in personal injury cases.
               </p>
