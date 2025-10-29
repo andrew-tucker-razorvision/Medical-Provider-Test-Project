@@ -180,33 +180,60 @@ export default function Index() {
           {/* Steps Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Step 1 */}
-            <div className="bg-light-gray p-10 rounded-lg hover:shadow-lg transition-shadow duration-300">
-              <div className="text-7xl font-bold text-gray-200 mb-4">01</div>
-              <Users className="w-12 h-12 text-teal mb-6" />
-              <h3 className="text-2xl font-bold text-navy mb-4">Create Your Profile</h3>
-              <p className="text-charcoal leading-relaxed">
-                Law firms and providers create detailed profiles highlighting specialties, experience, and service areas.
-              </p>
+            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/267482/pexels-photo-267482.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Create user profile setup"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">01</div>
+              </div>
+              <div className="p-10">
+                <h3 className="text-2xl font-bold text-navy mb-4">Create Your Profile</h3>
+                <p className="text-charcoal leading-relaxed">
+                  Law firms and providers create detailed profiles highlighting specialties, experience, and service areas.
+                </p>
+              </div>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-light-gray p-10 rounded-lg hover:shadow-lg transition-shadow duration-300">
-              <div className="text-7xl font-bold text-gray-200 mb-4">02</div>
-              <Search className="w-12 h-12 text-teal mb-6" />
-              <h3 className="text-2xl font-bold text-navy mb-4">Search & Connect</h3>
-              <p className="text-charcoal leading-relaxed">
-                Attorneys search our vetted provider network by specialty, location, and availability. Send connection requests instantly.
-              </p>
+            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/4792732/pexels-photo-4792732.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Search and connect with providers"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">02</div>
+              </div>
+              <div className="p-10">
+                <h3 className="text-2xl font-bold text-navy mb-4">Search & Connect</h3>
+                <p className="text-charcoal leading-relaxed">
+                  Attorneys search our vetted provider network by specialty, location, and availability. Send connection requests instantly.
+                </p>
+              </div>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-light-gray p-10 rounded-lg hover:shadow-lg transition-shadow duration-300">
-              <div className="text-7xl font-bold text-gray-200 mb-4">03</div>
-              <Calendar className="w-12 h-12 text-teal mb-6" />
-              <h3 className="text-2xl font-bold text-navy mb-4">Coordinate Care</h3>
-              <p className="text-charcoal leading-relaxed">
-                Manage appointments, share records securely, and track case progress through our integrated platform dashboard.
-              </p>
+            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/6809657/pexels-photo-6809657.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Coordinate care and appointments"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">03</div>
+              </div>
+              <div className="p-10">
+                <h3 className="text-2xl font-bold text-navy mb-4">Coordinate Care</h3>
+                <p className="text-charcoal leading-relaxed">
+                  Manage appointments, share records securely, and track case progress through our integrated platform dashboard.
+                </p>
+              </div>
             </div>
           </div>
         </div>
