@@ -420,7 +420,7 @@ export default function Index() {
       <section className="py-12 md:py-20 bg-gradient-to-r from-navy to-navy-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Ready to Transform Your Practice?
             </h2>
