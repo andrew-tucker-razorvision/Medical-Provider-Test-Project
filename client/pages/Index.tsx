@@ -166,7 +166,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 3: HOW IT WORKS */}
-      <section id="how-it-works" className="py-20 md:py-32 bg-white">
+      <section id="how-it-works" className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-16">
