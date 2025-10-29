@@ -75,10 +75,10 @@ export default function Index() {
     <div className="bg-white">
       {/* SECTION 1: HERO */}
       <section className="pt-8 pb-16 md:pb-20 bg-gradient-to-br from-white via-white to-light-gray">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col">
           {/* Full Width Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-12 md:mb-16">
-            Connect with Trusted Medical Experts Instantly
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-12 md:mb-16 text-center self-center">
+            Connect with Trusted Medical Experts
           </h1>
 
           {/* Content Grid */}
