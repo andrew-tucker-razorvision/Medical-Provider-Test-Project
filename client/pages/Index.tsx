@@ -78,7 +78,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Side Text */}
-            <div className="md:pt-20">
+            <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-6">
                 Connect Personal Injury Attorneys with Trusted Medical Providers Instantly
               </h1>
