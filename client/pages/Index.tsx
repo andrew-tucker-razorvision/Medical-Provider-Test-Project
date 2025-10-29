@@ -76,38 +76,38 @@ export default function Index() {
       {/* SECTION 1: HERO */}
       <section className="pt-8 pb-20 md:pb-0 md:min-h-screen flex items-center bg-gradient-to-br from-white via-white to-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             {/* Left Side Text */}
-            <div>
+            <div className="lg:col-span-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-6">
                 Connect Personal Injury Attorneys with Trusted Medical Providers Instantly
               </h1>
-              <p className="text-lg md:text-xl text-charcoal mb-8 leading-relaxed max-w-xl">
+              <p className="text-lg text-charcoal mb-6 leading-relaxed">
                 Streamline case management and improve client outcomes with our vetted network of medical professionals specializing in personal injury cases.
               </p>
 
               {/* Value Props */}
-              <div className="space-y-4 mb-12">
+              <div className="space-y-3 mb-8">
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-charcoal">Vetted providers in 50+ states</span>
+                  <span className="text-base text-charcoal">Vetted providers in 50+ states</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-charcoal">24-hour response guarantee</span>
+                  <span className="text-base text-charcoal">24-hour response guarantee</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-charcoal">Seamless case coordination tools</span>
+                  <span className="text-base text-charcoal">Seamless case coordination tools</span>
                 </div>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12">
-                <button className="px-10 py-4 bg-orange text-white text-lg font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
+                <button className="px-8 py-3 bg-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                   Get Started Free
                 </button>
-                <a href="#" className="flex items-center text-teal font-semibold text-lg hover:underline group">
+                <a href="#" className="flex items-center text-teal font-semibold hover:underline group">
                   <Play className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
                   Watch 2-min demo
                 </a>
@@ -122,11 +122,11 @@ export default function Index() {
             </div>
 
             {/* Right Side Illustration */}
-            <div className="hidden md:flex items-center justify-center min-h-96">
+            <div className="hidden lg:flex items-center justify-center lg:col-span-3">
               <img
-                src="https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Professional handshake between attorneys and medical providers"
-                className="w-full max-w-md h-96 object-cover rounded-lg shadow-2xl"
+                className="w-full h-auto rounded-lg shadow-2xl"
               />
             </div>
           </div>
