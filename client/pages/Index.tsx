@@ -78,7 +78,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* Full Width Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-12 md:mb-16">
-            Connect Personal Injury Attorneys with Trusted Medical Providers Instantly
+            Connect with Trusted Medical Experts Instantly
           </h1>
 
           {/* Content Grid */}
