@@ -12,9 +12,9 @@
 1. [Download Code from Host Site](#1-download-code-from-host-site) ⭐ **START HERE**
 2. [Create Git Repository & Initial Commit](#2-create-git-repository--initial-commit)
 3. [Codebase Exploration & README Generation](#3-codebase-exploration--readme-generation)
-4. [Create GitHub Project Board](#4-create-github-project-board)
+4. [Development Tools Setup](#4-development-tools-setup)
 5. [Branching Strategy](#5-branching-strategy)
-6. [Development Tools Setup](#6-development-tools-setup)
+6. [Create GitHub Project Board](#6-create-github-project-board)
 7. [Feature Development Workflow](#7-feature-development-workflow)
 8. [Code Review Process](#8-code-review-process)
 9. [Version Control & Tagging](#9-version-control--tagging)
@@ -58,7 +58,7 @@ Initial tech stack:
 
 ---
 
-## 2. Git Repository Creation
+## 2. Create Git Repository & Initial Commit
 
 ### Create GitHub Repository
 
@@ -93,68 +93,86 @@ git push -u origin main
 
 ---
 
-## 3. Branching Strategy
+## 3. Codebase Exploration & README Generation
 
-### Branch Naming Convention
+### Use Claude Code to Explore the Codebase
 
-**Adopted Strategy:**
+**Why This Matters:**
+Before creating branches and workflows, understand what you're working with:
+- Technology stack and dependencies
+- Project structure and architecture
+- Existing features and components
+- Design system and styling approach
+- Configuration and build setup
+
+### Exploration Process
+
+**Ask Claude Code:**
 ```
-main                          ← Production-ready code
-  └── feature/add-login-page  ← Feature branches
-  └── feature/add-contact-page
-  └── feature/add-about-page
-  └── bugfix/fix-header-nav   ← Bug fixes
-  └── hotfix/security-patch   ← Emergency fixes
+I've just committed the initial code from builder.io to git.
+Please explore this codebase systematically and tell me:
+
+1. What is the tech stack? (Frontend, build tool, styling, routing, etc.)
+2. What is the project structure?
+3. What are the key dependencies and their purposes?
+4. What pages/features currently exist?
+5. How is the design system configured? (colors, typography, etc.)
+6. What configuration files are present and what do they do?
+
+Use Glob and Read tools to explore thoroughly.
 ```
 
-**Branch Naming Rules:**
-- [ ] `feature/` - New features (e.g., `feature/add-about-page`)
-- [ ] `bugfix/` - Bug fixes (e.g., `bugfix/fix-navigation`)
-- [ ] `hotfix/` - Critical production fixes
-- [ ] Use lowercase and hyphens, no spaces
-- [ ] Keep names descriptive but concise
+**Expected Analysis:**
+- [ ] Tech stack identified (React, Vite, Tailwind, etc.)
+- [ ] Folder structure mapped
+- [ ] Key files and their purposes documented
+- [ ] Design system tokens extracted
+- [ ] Dependencies explained
+- [ ] Configuration files reviewed
 
-### Workflow Rules
+### Generate README
 
-**Main Branch Protection:**
-- [ ] No direct commits to `main`
-- [ ] All changes via Pull Requests
-- [ ] Require code review before merge
-- [ ] Require status checks to pass
+**Ask Claude Code:**
+```
+Based on your exploration, please generate a comprehensive README.md that includes:
 
-**Feature Branch Workflow:**
-1. Always branch from latest `main`
-2. Create feature branch
-3. Make changes
-4. Push branch
-5. Create Pull Request
-6. Code review
-7. Merge with squash
-8. Delete feature branch
-9. Tag version if needed
+- Project title and description
+- Tech stack overview
+- Features list
+- Prerequisites (Node.js version, package manager)
+- Installation instructions
+- Development commands (dev, build, test)
+- Project structure diagram
+- Key dependencies explanation
+- Configuration files overview
+- Contributing guidelines
+- License information
 
-**Commands:**
+Make it accurate and helpful for new developers joining the project.
+```
+
+### Commit README
+
 ```bash
-# Start new feature
-git checkout main
-git pull origin main
-git checkout -b feature/new-feature-name
-
-# Push feature
-git add .
-git commit -m "feat: Description"
-git push -u origin feature/new-feature-name
-
-# After merge
-git checkout main
-git pull origin main
-git branch -d feature/new-feature-name
+git add README.md
+git commit -m "docs: Add comprehensive README with project overview and setup instructions"
+git push origin main
 ```
+
+**Detailed Guide:**
+See **[CODEBASE_EXPLORATION_GUIDE.md](CODEBASE_EXPLORATION_GUIDE.md)** for:
+- Step-by-step exploration process
+- Example prompts and expected outputs
+- Complete README template
+- Best practices for codebase analysis
+- Real example from AcciLink project
+
+**Time Estimate:** 15-20 minutes
 
 **Discussion Points:**
-- Should we require branch protection rules?
-- How many reviewers should approve PRs?
-- What status checks should be required (tests, linting)?
+- Should this be required for all new projects?
+- Who maintains the README going forward?
+- Should we create templates for common project types?
 
 ---
 
@@ -244,7 +262,125 @@ const { chromium } = require('playwright');
 
 ---
 
-## 5. Feature Development Workflow
+## 5. Branching Strategy
+
+### Branch Naming Convention
+
+**Adopted Strategy:**
+```
+main                          ← Production-ready code
+  └── feature/add-login-page  ← Feature branches
+  └── feature/add-contact-page
+  └── feature/add-about-page
+  └── bugfix/fix-header-nav   ← Bug fixes
+  └── hotfix/security-patch   ← Emergency fixes
+```
+
+**Branch Naming Rules:**
+- [ ] `feature/` - New features (e.g., `feature/add-about-page`)
+- [ ] `bugfix/` - Bug fixes (e.g., `bugfix/fix-navigation`)
+- [ ] `hotfix/` - Critical production fixes
+- [ ] Use lowercase and hyphens, no spaces
+- [ ] Keep names descriptive but concise
+
+### Workflow Rules
+
+**Main Branch Protection:**
+- [ ] No direct commits to `main`
+- [ ] All changes via Pull Requests
+- [ ] Require code review before merge
+- [ ] Require status checks to pass
+
+**Feature Branch Workflow:**
+1. Always branch from latest `main`
+2. Create feature branch
+3. Make changes
+4. Push branch
+5. Create Pull Request
+6. Code review
+7. Merge with squash
+8. Delete feature branch
+9. Tag version if needed
+
+**Commands:**
+```bash
+# Start new feature
+git checkout main
+git pull origin main
+git checkout -b feature/new-feature-name
+
+# Push feature
+git add .
+git commit -m "feat: Description"
+git push -u origin feature/new-feature-name
+
+# After merge
+git checkout main
+git pull origin main
+git branch -d feature/new-feature-name
+```
+
+**Discussion Points:**
+- Should we require branch protection rules?
+- How many reviewers should approve PRs?
+- What status checks should be required (tests, linting)?
+
+---
+
+## 6. Create GitHub Project Board
+
+### GitHub Projects Setup
+
+**Create Project Board:**
+- [ ] Go to repository → Projects → New Project
+- [ ] Choose "Board" layout
+- [ ] Name: "Medical Example" (or your project name)
+
+**Configure Columns:**
+1. **Backlog** - New issues not yet prioritized
+2. **Ready** - Prioritized and ready to work
+3. **In Progress** - Actively being developed
+4. **In Review** - PR created, awaiting review
+5. **Done** - Merged and completed
+
+### Automated Status Updates
+
+**Get Project IDs:**
+```bash
+gh project list --owner username
+gh project field-list 2 --owner username --format json
+gh project item-list 2 --owner username --format json
+```
+
+**Add Issue to Project:**
+```bash
+gh project item-add 2 --owner username --url [issue-url]
+```
+
+**Update Status:**
+```bash
+gh project item-edit \
+  --project-id [PROJECT-ID] \
+  --id [ITEM-ID] \
+  --field-id [STATUS-FIELD-ID] \
+  --single-select-option-id [STATUS-OPTION-ID]
+```
+
+**Best Practices:**
+- [ ] Update status when starting work
+- [ ] Add comments to issues regularly
+- [ ] Link PRs to issues
+- [ ] Close issues when PRs merge
+- [ ] Keep project board current
+
+**Discussion Points:**
+- Should project board updates be automated?
+- Who is responsible for keeping the board current?
+- What columns/statuses do we need?
+
+---
+
+## 7. Feature Development Workflow
 
 ### Complete Feature Lifecycle
 
@@ -450,7 +586,7 @@ EOF
 
 ---
 
-## 6. Code Review Process
+## 8. Code Review Process
 
 ### Create Pull Request
 
@@ -608,7 +744,7 @@ PR #13 (About Page) received thorough review covering:
 
 ---
 
-## 7. Version Control & Tagging
+## 9. Version Control & Tagging
 
 ### Semantic Versioning
 
@@ -672,82 +808,7 @@ git push origin v1.3.0
 
 ---
 
-## 8. Project Management Integration
-
-### GitHub Projects Setup
-
-**Create Project Board:**
-- [ ] Go to repository → Projects → New Project
-- [ ] Choose "Board" layout
-- [ ] Name: "Medical Example" (or your project name)
-
-**Configure Columns:**
-1. **Backlog** - New issues not yet prioritized
-2. **Ready** - Prioritized and ready to work
-3. **In Progress** - Actively being developed
-4. **In Review** - PR created, awaiting review
-5. **Done** - Merged and completed
-
-### Automated Status Updates
-
-**Get Project IDs:**
-```bash
-gh project list --owner username
-gh project field-list 2 --owner username --format json
-gh project item-list 2 --owner username --format json
-```
-
-**Add Issue to Project:**
-```bash
-gh project item-add 2 --owner username --url [issue-url]
-```
-
-**Update Status:**
-```bash
-gh project item-edit \
-  --project-id [PROJECT-ID] \
-  --id [ITEM-ID] \
-  --field-id [STATUS-FIELD-ID] \
-  --single-select-option-id [STATUS-OPTION-ID]
-```
-
-**Status Options from AcciLink:**
-- Backlog: `f75ad846`
-- Ready: `61e4505c`
-- In Progress: `47fc9ee4`
-- In Review: `df73e18b`
-- Done: `98236657`
-
-**Workflow Automation:**
-
-**When starting work:**
-```bash
-# Move to "In Progress"
-gh project item-edit --project-id [ID] --status "In Progress"
-```
-
-**When PR created:**
-```bash
-# Move to "In Review"
-gh project item-edit --project-id [ID] --status "In Review"
-```
-
-**When PR merged:**
-```bash
-# Move to "Done"
-gh project item-edit --project-id [ID] --status "Done"
-```
-
-**Best Practices:**
-- [ ] Update status when starting work
-- [ ] Add comments to issues regularly
-- [ ] Link PRs to issues
-- [ ] Close issues when PRs merge
-- [ ] Keep project board current
-
----
-
-## 9. Documentation Standards
+## 10. Documentation Standards
 
 ### README.md Structure
 
@@ -872,7 +933,7 @@ export function Contact() {
 
 ---
 
-## 10. Best Practices & Lessons Learned
+## 11. Best Practices & Lessons Learned
 
 ### What Worked Well in AcciLink Project
 
