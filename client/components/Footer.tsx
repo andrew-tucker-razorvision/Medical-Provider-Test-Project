@@ -1,5 +1,10 @@
 import { Mail, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
 
+/**
+ * Footer Component
+ * Displays site footer with company info, navigation links, and contact details
+ * Created: 2024
+ */
 export function Footer() {
   return (
     <footer className="bg-charcoal text-white">
