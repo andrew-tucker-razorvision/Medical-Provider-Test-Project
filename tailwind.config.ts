@@ -59,7 +59,7 @@ export default {
         },
         navy: "hsl(var(--navy))",
         teal: "hsl(var(--teal))",
-        orange: "hsl(var(--orange))",
+        "sage-green": "hsl(var(--sage-green))",
         "light-gray": "hsl(var(--light-gray))",
         charcoal: "hsl(var(--charcoal))",
         success: "hsl(var(--success))",

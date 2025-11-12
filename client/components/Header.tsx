@@ -40,14 +40,14 @@ export function Header() {
           <button className="px-6 py-3 text-navy border-2 border-navy rounded hover:bg-navy hover:text-white transition-colors duration-200">
             Log In
           </button>
-          <button className="px-6 py-3 bg-orange text-white rounded hover:bg-orange-600 transition-colors duration-200 font-semibold">
+          <button className="px-6 py-3 bg-sage-green text-white rounded hover:bg-sage-green-600 transition-colors duration-200 font-semibold">
             Sign Up
           </button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4">
-          <button className="px-4 py-2 bg-orange text-white rounded text-sm font-semibold hover:bg-orange-600 transition-colors duration-200">
+          <button className="px-4 py-2 bg-sage-green text-white rounded text-sm font-semibold hover:bg-sage-green-600 transition-colors duration-200">
             Sign Up
           </button>
           <button

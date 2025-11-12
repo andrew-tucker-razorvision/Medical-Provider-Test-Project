@@ -78,7 +78,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col">
           {/* Full Width Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-12 md:mb-16 text-center self-center">
-            Connect with Trusted Medical Experts
+            New Test Title Made With Claude Code v2
           </h1>
 
           {/* Content Grid */}
@@ -107,7 +107,7 @@ export default function Index() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
-                <button className="px-8 py-3 bg-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                <button className="px-8 py-3 bg-sage-green text-white font-semibold rounded-lg hover:bg-sage-green-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                   Get Started Free
                 </button>
                 <a href="#" className="flex items-center text-teal font-semibold hover:underline group">
@@ -142,25 +142,25 @@ export default function Index() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
             {/* Stat 1 */}
             <div className="text-center md:border-r md:border-gray-600 md:border-r-opacity-20">
-              <Shield className="w-8 h-8 mx-auto mb-4 text-orange" />
+              <Shield className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">500+</div>
               <div className="text-gray-300 text-lg">Law Firms</div>
             </div>
             {/* Stat 2 */}
             <div className="text-center md:border-r md:border-gray-600 md:border-r-opacity-20">
-              <Stethoscope className="w-8 h-8 mx-auto mb-4 text-orange" />
+              <Stethoscope className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">2,000+</div>
               <div className="text-gray-300 text-lg">Medical Providers</div>
             </div>
             {/* Stat 3 */}
             <div className="text-center md:border-r md:border-gray-600 md:border-r-opacity-20">
-              <FileText className="w-8 h-8 mx-auto mb-4 text-orange" />
+              <FileText className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">50,000+</div>
               <div className="text-gray-300 text-lg">Cases Coordinated</div>
             </div>
             {/* Stat 4 */}
             <div className="text-center">
-              <Clock className="w-8 h-8 mx-auto mb-4 text-orange" />
+              <Clock className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">24hr</div>
               <div className="text-gray-300 text-lg">Avg. Response Time</div>
             </div>
@@ -174,7 +174,7 @@ export default function Index() {
           {/* Heading */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">How It Works</h2>
-            <div className="w-16 h-1 bg-orange mx-auto mb-6"></div>
+            <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
             <p className="text-xl text-charcoal max-w-2xl mx-auto">
               Connect with the right medical professionals in three simple steps
             </p>
@@ -346,7 +346,7 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
               Trusted by Legal and Medical Professionals
             </h2>
-            <div className="w-16 h-1 bg-orange mx-auto"></div>
+            <div className="w-16 h-1 bg-sage-green mx-auto"></div>
           </div>
 
           {/* Testimonial Carousel */}
@@ -356,7 +356,7 @@ export default function Index() {
               {/* Stars */}
               <div className="flex justify-center gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-orange fill-orange" />
+                  <Star key={i} className="w-6 h-6 text-sage-green fill-sage-green" />
                 ))}
               </div>
 
@@ -441,7 +441,7 @@ export default function Index() {
               <p className="text-charcoal text-lg mb-8">
                 Access our vetted provider network and streamline case coordination
               </p>
-              <button className="w-full bg-orange text-white font-semibold py-4 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-300">
+              <button className="w-full bg-sage-green text-white font-semibold py-4 px-6 rounded-lg hover:bg-sage-green-600 transition-colors duration-300">
                 Sign Up as Attorney
               </button>
             </div>

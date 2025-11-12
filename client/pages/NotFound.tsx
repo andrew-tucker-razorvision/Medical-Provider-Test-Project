@@ -21,7 +21,7 @@ const NotFound = () => {
         </p>
         <a
           href="/"
-          className="inline-block px-8 py-4 bg-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-300"
+          className="inline-block px-8 py-4 bg-sage-green text-white font-semibold rounded-lg hover:bg-sage-green-600 transition-colors duration-300"
         >
           Return to Home
         </a>

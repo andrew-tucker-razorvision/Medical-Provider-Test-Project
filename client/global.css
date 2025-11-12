@@ -61,7 +61,7 @@
     /* AcciLink brand colors */
     --navy: 215 46% 24%;
     --teal: 180 100% 28%;
-    --orange: 25 97% 53%;
+    --sage-green: 120 25% 65%;
     --light-gray: 210 40% 98%;
     --charcoal: 215 13% 34%;
     --success: 160 84% 39%;
@@ -86,7 +86,7 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 25 97% 53%;
+    --accent: 120 25% 65%;
     --accent-foreground: 215 46% 24%;
 
     --destructive: 0 62.8% 30.6%;
