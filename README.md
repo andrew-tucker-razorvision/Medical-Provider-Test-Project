@@ -1,59 +1,59 @@
-# 🏥 AcciLink
+# AcciLink
 
-> 💼 A full-stack platform connecting attorneys with medical providers for personal injury cases
+> A full-stack platform connecting attorneys with medical providers for personal injury cases
 
 AcciLink is a comprehensive medical-legal networking platform that streamlines case management and improves client outcomes by connecting law firms with vetted medical professionals specializing in personal injury cases.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔐 **Vetted Provider Network** - Access to 2,000+ pre-screened medical providers across 50+ states
-- ⚡ **24-Hour Response Guarantee** - Fast connection and scheduling for urgent cases
-- 📋 **Seamless Case Coordination** - Integrated tools for managing appointments, sharing records, and tracking case progress
-- 🔍 **Advanced Search & Filtering** - Find providers by specialty, location, experience, and availability
-- 👥 **Dual User Types** - Separate workflows for attorneys and medical providers
-- 📱 **Responsive Design** - Mobile-first UI that works on all devices
-- 🎨 **Modern UI Components** - Built with Radix UI and Tailwind CSS for a polished user experience
+- **Vetted Provider Network** - Access to 2,000+ pre-screened medical providers across 50+ states
+- **24-Hour Response Guarantee** - Fast connection and scheduling for urgent cases
+- **Seamless Case Coordination** - Integrated tools for managing appointments, sharing records, and tracking case progress
+- **Advanced Search & Filtering** - Find providers by specialty, location, experience, and availability
+- **Dual User Types** - Separate workflows for attorneys and medical providers
+- **Responsive Design** - Mobile-first UI that works on all devices
+- **Modern UI Components** - Built with Radix UI and Tailwind CSS for a polished user experience
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
-- ⚛️ **React 18** - Modern React with hooks
-- 📘 **TypeScript** - Type-safe development
-- ⚡ **Vite** - Lightning-fast build tool and dev server
-- 🛣️ **React Router v6** - Client-side routing
-- 🔄 **TanStack Query** - Server state management
-- 🧩 **Radix UI** - Accessible component primitives
-- 🎨 **Tailwind CSS** - Utility-first styling
-- 🎬 **Framer Motion** - Smooth animations
-- 🎯 **Lucide React** - Icon library
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type-safe development
+- **Vite** - Lightning-fast build tool and dev server
+- **React Router v6** - Client-side routing
+- **TanStack Query** - Server state management
+- **Radix UI** - Accessible component primitives
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **Lucide React** - Icon library
 
 ### Backend
-- 🚀 **Express** - Node.js web framework
-- 📘 **TypeScript** - Type-safe server code
-- 🔒 **CORS** - Cross-origin resource sharing
-- ✅ **Zod** - Schema validation
+- **Express** - Node.js web framework
+- **TypeScript** - Type-safe server code
+- **CORS** - Cross-origin resource sharing
+- **Zod** - Schema validation
 
 ### Development Tools
-- ⚡ **Vite SWC Plugin** - Fast React refresh
-- 💅 **Prettier** - Code formatting
-- 🧪 **Vitest** - Unit testing framework
-- 📦 **pnpm** - Fast, disk-efficient package manager
-- 🎭 **Playwright** - Automated browser testing and screenshots
-- 🐙 **GitHub CLI** - Automated issue and project management
+- **Vite SWC Plugin** - Fast React refresh
+- **Prettier** - Code formatting
+- **Vitest** - Unit testing framework
+- **pnpm** - Fast, disk-efficient package manager
+- **Playwright** - Automated browser testing and screenshots
+- **GitHub CLI** - Automated issue and project management
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-- 📗 **Node.js** (v18 or higher)
-- 📦 **pnpm** (v10.14.0 or higher)
-- 🐙 **GitHub CLI** (for automated workflows)
+- **Node.js** (v18 or higher)
+- **pnpm** (v10.14.0 or higher)
+- **GitHub CLI** (for automated workflows)
 
 ### Install pnpm globally:
 ```bash
@@ -67,32 +67,32 @@ winget install --id GitHub.cli
 
 ---
 
-## 🚀 Installation
+## Installation
 
-### 1️⃣ Clone the repository:
+### 1. Clone the repository:
 ```bash
 git clone <repository-url>
 cd Medical-Provider-Test-Project
 ```
 
-### 2️⃣ Install dependencies:
+### 2. Install dependencies:
 ```bash
 pnpm install
 ```
 
-### 3️⃣ Create environment file:
+### 3. Create environment file:
 ```bash
 cp .env .env.local
 ```
 
-### 4️⃣ Configure environment variables
-See [Environment Variables](#-environment-variables) section below.
+### 4. Configure environment variables
+See [Environment Variables](#environment-variables) section below.
 
 ---
 
-## 💻 Usage
+## Usage
 
-### 🔧 Development Mode
+### Development Mode
 
 Start the development server with hot reload:
 
@@ -101,10 +101,10 @@ pnpm dev
 ```
 
 **This will start:**
-- 🌐 Frontend dev server at `http://localhost:8080`
-- 🚀 Express API server integrated with Vite
+- Frontend dev server at `http://localhost:8080`
+- Express API server integrated with Vite
 
-### 📦 Production Build
+### Production Build
 
 Build the application for production:
 
@@ -113,28 +113,28 @@ pnpm build
 ```
 
 **Creates two builds:**
-- 📂 `dist/spa/` - Client-side React application
-- 📂 `dist/server/` - Server-side Express application
+- `dist/spa/` - Client-side React application
+- `dist/server/` - Server-side Express application
 
-### ▶️ Start Production Server
+### Start Production Server
 
 ```bash
 pnpm start
 ```
 
-### 🔍 Type Checking
+### Type Checking
 
 ```bash
 pnpm typecheck
 ```
 
-### 🧪 Testing
+### Testing
 
 ```bash
 pnpm test
 ```
 
-### 💅 Code Formatting
+### Code Formatting
 
 ```bash
 pnpm format.fix
@@ -142,17 +142,17 @@ pnpm format.fix
 
 ---
 
-## 🤖 Automated Workflow with Claude Code
+## Automated Workflow with Claude Code
 
 This project uses an automated development workflow powered by Claude Code for efficient issue management, testing, and deployment.
 
-### 🔄 Complete Workflow Process
+### Complete Workflow Process
 
-#### 1️⃣ **Issue Creation**
+#### 1. Issue Creation
 - Create issues manually in GitHub, OR
 - Claude Code creates issues automatically via `gh issue create`
 
-#### 2️⃣ **Issue Retrieval**
+#### 2. Issue Retrieval
 ```bash
 # User provides issue number
 "Execute issue #4"
@@ -160,33 +160,33 @@ This project uses an automated development workflow powered by Claude Code for e
 - Claude Code fetches issue details with `gh issue view`
 - Analyzes requirements and acceptance criteria
 
-#### 3️⃣ **Implementation**
-- 📝 Reads and understands requirements
-- ✏️ Makes code changes across all affected files
-- 🔧 Ensures proper refactoring (variable renames, etc.)
-- 🎨 Maintains code quality and consistency
+#### 3. Implementation
+- Reads and understands requirements
+- Makes code changes across all affected files
+- Ensures proper refactoring (variable renames, etc.)
+- Maintains code quality and consistency
 
-#### 4️⃣ **Testing**
-- ✅ Verifies changes via HMR (Hot Module Replacement)
-- 🔍 Checks for console errors
-- ✔️ Confirms all acceptance criteria met
+#### 4. Testing
+- Verifies changes via HMR (Hot Module Replacement)
+- Checks for console errors
+- Confirms all acceptance criteria met
 
-#### 5️⃣ **Visual Documentation** (for UI changes)
-- 📸 Automated screenshot capture using Playwright
-- ☁️ Upload to Imgur image hosting
-- 📎 Add screenshot to issue with detailed description
+#### 5. Visual Documentation (for UI changes)
+- Automated screenshot capture using Playwright
+- Upload to Imgur image hosting
+- Add screenshot to issue with detailed description
 
-#### 6️⃣ **Project Management**
-- ➕ Add issue to GitHub Project (if not already added)
-- 🔄 Update status to "In review"
-- 💬 Add completion summary comment
+#### 6. Project Management
+- Add issue to GitHub Project (if not already added)
+- Update status to "In Review"
+- Add completion summary comment
 
-#### 7️⃣ **Ready for Review**
-- 📋 All work documented
-- 📸 Visual proof provided (if applicable)
-- ✅ Status set for team review
+#### 7. Ready for Review
+- All work documented
+- Visual proof provided (if applicable)
+- Status set for team review
 
-### 🛠️ Tools & Integration
+### Tools & Integration
 
 #### GitHub CLI Commands
 ```bash
@@ -212,74 +212,74 @@ gh project item-edit  # Update project status
 #### Project Board Integration
 - **Project:** "@andrew-tucker-razorvision's Medical Example"
 - **Status Flow:**
-  - 📋 Backlog
-  - ✅ Ready
-  - 🚧 In Progress
-  - 🔍 In Review ← (Automated after testing)
-  - ✔️ Done
+  - Backlog
+  - Ready
+  - In Progress
+  - In Review (Automated after testing)
+  - Done
 
-### 📊 Benefits
+### Benefits
 
-#### ⚡ Efficiency
-- ✅ Automated screenshot capture and upload
-- ✅ Automatic project board updates
-- ✅ Consistent documentation on every issue
-- ✅ Full audit trail of changes
+#### Efficiency
+- Automated screenshot capture and upload
+- Automatic project board updates
+- Consistent documentation on every issue
+- Full audit trail of changes
 
-#### 🎯 Quality
-- ✅ Visual proof of changes
-- ✅ Comprehensive testing before review
-- ✅ Proper code refactoring (not just find/replace)
-- ✅ Clear status tracking
+#### Quality
+- Visual proof of changes
+- Comprehensive testing before review
+- Proper code refactoring (not just find/replace)
+- Clear status tracking
 
-#### 🤝 Collaboration
-- ✅ "In review" status signals reviewers
-- ✅ Screenshot provides context
-- ✅ All work documented in issue comments
-- ✅ Integrated with existing project workflow
+#### Collaboration
+- "In Review" status signals reviewers
+- Screenshot provides context
+- All work documented in issue comments
+- Integrated with existing project workflow
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Medical-Provider-Test-Project/
-├── 📂 client/                    # Frontend React application
-│   ├── 🧩 components/           # Reusable UI components
-│   │   ├── Header.tsx          # Navigation header
-│   │   ├── Footer.tsx          # Site footer
-│   │   └── ui/                 # Radix UI components (50+)
-│   ├── 🎣 hooks/               # Custom React hooks
-│   ├── 📚 lib/                 # Utility functions
-│   ├── 📄 pages/               # Page components
-│   │   ├── Index.tsx           # Landing page
-│   │   └── NotFound.tsx        # 404 page
-│   ├── ⚛️ App.tsx              # Main application entry
-│   ├── 🎨 global.css           # Global styles & Tailwind
-│   └── 📘 vite-env.d.ts        # Vite type definitions
-├── 📂 server/                   # Backend Express application
-│   ├── 🛣️ routes/              # API route handlers
-│   │   └── demo.ts             # Example route
-│   ├── 🚀 index.ts             # Express server setup
-│   └── 📦 node-build.ts        # Production build entry
-├── 📂 shared/                   # Shared types between client/server
-│   └── 📘 api.ts               # API type definitions
-├── 📂 dist/                     # Build output (generated)
-│   ├── spa/                    # Client build
-│   └── server/                 # Server build
-├── 🔐 .env                      # Environment variables
-├── 📄 index.html               # HTML entry point
-├── 📦 package.json             # Dependencies and scripts
-├── 📘 tsconfig.json            # TypeScript configuration
-├── 🎨 tailwind.config.ts       # Tailwind CSS configuration
-├── ⚡ vite.config.ts           # Vite client configuration
-├── ⚡ vite.config.server.ts    # Vite server configuration
-└── 🎨 postcss.config.js        # PostCSS configuration
+├── client/                    # Frontend React application
+│   ├── components/           # Reusable UI components
+│   │   ├── Header.tsx       # Navigation header
+│   │   ├── Footer.tsx       # Site footer
+│   │   └── ui/              # Radix UI components (50+)
+│   ├── hooks/               # Custom React hooks
+│   ├── lib/                 # Utility functions
+│   ├── pages/               # Page components
+│   │   ├── Index.tsx        # Landing page
+│   │   └── NotFound.tsx     # 404 page
+│   ├── App.tsx              # Main application entry
+│   ├── global.css           # Global styles & Tailwind
+│   └── vite-env.d.ts        # Vite type definitions
+├── server/                   # Backend Express application
+│   ├── routes/              # API route handlers
+│   │   └── demo.ts          # Example route
+│   ├── index.ts             # Express server setup
+│   └── node-build.ts        # Production build entry
+├── shared/                   # Shared types between client/server
+│   └── api.ts               # API type definitions
+├── dist/                     # Build output (generated)
+│   ├── spa/                 # Client build
+│   └── server/              # Server build
+├── .env                      # Environment variables
+├── index.html               # HTML entry point
+├── package.json             # Dependencies and scripts
+├── tsconfig.json            # TypeScript configuration
+├── tailwind.config.ts       # Tailwind CSS configuration
+├── vite.config.ts           # Vite client configuration
+├── vite.config.server.ts    # Vite server configuration
+└── postcss.config.js        # PostCSS configuration
 ```
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 Create a `.env` file in the root directory:
 
@@ -295,10 +295,10 @@ PING_MESSAGE=ping
 
 ---
 
-## 🌐 API Endpoints
+## API Endpoints
 
 ### `GET /api/ping`
-💓 Health check endpoint
+Health check endpoint
 
 **Response:**
 ```json
@@ -308,7 +308,7 @@ PING_MESSAGE=ping
 ```
 
 ### `GET /api/demo`
-🎯 Demo endpoint showing server response
+Demo endpoint showing server response
 
 **Response:**
 ```json
@@ -319,49 +319,49 @@ PING_MESSAGE=ping
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 | Script | Description |
 |--------|-------------|
-| 🔧 `pnpm dev` | Start development server with HMR |
-| 📦 `pnpm build` | Build for production (client + server) |
-| 📦 `pnpm build:client` | Build client only |
-| 📦 `pnpm build:server` | Build server only |
-| ▶️ `pnpm start` | Start production server |
-| 🧪 `pnpm test` | Run test suite |
-| 🔍 `pnpm typecheck` | Run TypeScript type checking |
-| 💅 `pnpm format.fix` | Format code with Prettier |
+| `pnpm dev` | Start development server with HMR |
+| `pnpm build` | Build for production (client + server) |
+| `pnpm build:client` | Build client only |
+| `pnpm build:server` | Build server only |
+| `pnpm start` | Start production server |
+| `pnpm test` | Run test suite |
+| `pnpm typecheck` | Run TypeScript type checking |
+| `pnpm format.fix` | Format code with Prettier |
 
 ---
 
-## 🎯 Key Features Detail
+## Key Features Detail
 
-### 👨‍⚖️ For Attorneys
-- 🔍 **Provider Discovery** - Search and filter through 2,000+ vetted medical providers
-- ⚡ **Quick Connections** - Send connection requests instantly
-- 📋 **Case Management** - Track appointments, records, and case progress
-- ✅ **Quality Assurance** - All providers are pre-vetted and reviewed
+### For Attorneys
+- **Provider Discovery** - Search and filter through 2,000+ vetted medical providers
+- **Quick Connections** - Send connection requests instantly
+- **Case Management** - Track appointments, records, and case progress
+- **Quality Assurance** - All providers are pre-vetted and reviewed
 
-### 👨‍⚕️ For Medical Providers
-- 📈 **Practice Growth** - Receive qualified referrals from personal injury attorneys
-- 🌐 **Network Access** - Join an exclusive network of trusted professionals
-- ⚙️ **Flexible Management** - Control your availability, specialties, and service areas
-- 🤝 **Seamless Coordination** - Integrated tools for attorney communication
+### For Medical Providers
+- **Practice Growth** - Receive qualified referrals from personal injury attorneys
+- **Network Access** - Join an exclusive network of trusted professionals
+- **Flexible Management** - Control your availability, specialties, and service areas
+- **Seamless Coordination** - Integrated tools for attorney communication
 
 ---
 
-## 🎨 Design System
+## Design System
 
 The project uses a custom design system built on Tailwind CSS with the following color palette:
 
-- 🔷 **Navy** (`--navy: 215 46% 24%`) - Primary brand color
-- 💚 **Teal** (`--teal: 180 100% 28%`) - Secondary accent
-- 🌿 **Sage Green** (`--sage-green: 120 25% 65%`) - Call-to-action color
-- ⚫ **Charcoal** (`--charcoal: 215 13% 34%`) - Text color
-- ⬜ **Light Gray** (`--light-gray: 210 40% 98%`) - Background color
-- ✅ **Success** (`--success: 160 84% 39%`) - Success states
+- **Navy** (`--navy: 215 46% 24%`) - Primary brand color
+- **Teal** (`--teal: 180 100% 28%`) - Secondary accent
+- **Sage Green** (`--sage-green: 120 25% 65%`) - Call-to-action color
+- **Charcoal** (`--charcoal: 215 13% 34%`) - Text color
+- **Light Gray** (`--light-gray: 210 40% 98%`) - Background color
+- **Success** (`--success: 160 84% 39%`) - Success states
 
-### 🎨 Color Usage
+### Color Usage
 - **Buttons:** Sage green with hover states
 - **Icons:** Sage green accents throughout
 - **Dividers:** Sage green section separators
@@ -369,74 +369,74 @@ The project uses a custom design system built on Tailwind CSS with the following
 
 ---
 
-## 🌍 Browser Support
+## Browser Support
 
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-### 1️⃣ Fork the repository
+### 1. Fork the repository
 ```bash
 git clone <your-fork-url>
 ```
 
-### 2️⃣ Create a feature branch
+### 2. Create a feature branch
 ```bash
 git checkout -b feature/amazing-feature
 ```
 
-### 3️⃣ Make your changes
+### 3. Make your changes
 Follow the automated workflow:
 - Create or pick an issue
 - Implement changes
 - Test thoroughly
 - Add screenshots (if UI changes)
 
-### 4️⃣ Commit your changes
+### 4. Commit your changes
 ```bash
 git commit -m 'Add some amazing feature'
 ```
 
-### 5️⃣ Push to the branch
+### 5. Push to the branch
 ```bash
 git push origin feature/amazing-feature
 ```
 
-### 6️⃣ Open a Pull Request
+### 6. Open a Pull Request
 - Link to the related issue
 - Include screenshots
 - Describe changes made
 
 ---
 
-## 📄 License
+## License
 
 This project is proprietary and confidential.
 
 ---
 
-## 💬 Support
+## Support
 
 For questions or issues:
-- 📧 **Email:** support@accilink.com
-- 📞 **Phone:** (555) 123-4567
+- **Email:** support@accilink.com
+- **Phone:** (555) 123-4567
 
 ---
 
-## 🏗️ Built With
+## Built With
 
-⚛️ **React** • 📘 **TypeScript** • 🚀 **Express** • ⚡ **Vite** • 🎨 **Tailwind CSS**
+**React** • **TypeScript** • **Express** • **Vite** • **Tailwind CSS**
 
 ---
 
 <div align="center">
 
-### 🤖 Powered by Claude Code
+### Powered by Claude Code
 
 *Automated workflows for efficient development*
 
