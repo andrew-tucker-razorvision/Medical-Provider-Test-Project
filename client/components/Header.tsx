@@ -21,7 +21,7 @@ export function Header() {
     { label: "For Attorneys", href: "#for-attorneys" },
     { label: "For Providers", href: "#for-providers" },
     { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
