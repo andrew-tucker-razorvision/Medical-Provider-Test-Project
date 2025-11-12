@@ -1,4 +1,5 @@
 import { Mail, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 /**
  * Footer Component
@@ -95,18 +96,32 @@ export function Footer() {
               Company
             </h4>
             <ul className="space-y-3">
-              {["About Us", "Contact", "Blog", "Careers", "Support"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-gray-400 text-sm hover:text-teal transition-colors"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-400 text-sm hover:text-teal transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-gray-400 text-sm hover:text-teal transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+              {["Blog", "Careers", "Support"].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-gray-400 text-sm hover:text-teal transition-colors"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
 
             {/* Contact Info */}
