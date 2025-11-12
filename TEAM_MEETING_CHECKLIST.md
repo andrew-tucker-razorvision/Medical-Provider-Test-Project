@@ -9,6 +9,7 @@
 ---
 
 ## Table of Contents
+0. [**Step 0: Codebase Exploration & README Generation**](#0-codebase-exploration--readme-generation) ⭐ **START HERE**
 1. [Initial Project Setup](#1-initial-project-setup)
 2. [Git Repository Creation](#2-git-repository-creation)
 3. [Branching Strategy](#3-branching-strategy)
@@ -19,6 +20,125 @@
 8. [Project Management Integration](#8-project-management-integration)
 9. [Documentation Standards](#9-documentation-standards)
 10. [Best Practices & Lessons Learned](#10-best-practices--lessons-learned)
+
+---
+
+## 0. Codebase Exploration & README Generation
+
+⭐ **This should be the FIRST step after downloading code from builder.io**
+
+### Why This Matters
+
+Before writing any code or creating workflows, you need to understand:
+- What technology stack you're working with
+- How the project is structured
+- What dependencies are included
+- What features already exist
+- How to properly document the project
+
+### Use Claude Code to Explore
+
+**Recommended Approach:**
+
+1. **Ask Claude Code to explore the codebase systematically:**
+   ```
+   I've just downloaded code from builder.io. Please explore this codebase and tell me:
+
+   1. What is the tech stack? (Frontend framework, build tool, styling, etc.)
+   2. What is the project structure?
+   3. What are the key dependencies?
+   4. What features/pages currently exist?
+   5. How is the design system configured?
+   6. What configuration files are present?
+
+   Use Glob and Read tools to explore systematically.
+   ```
+
+2. **Claude Code will analyze:**
+   - [ ] `package.json` - Dependencies and scripts
+   - [ ] `vite.config.ts` - Build configuration
+   - [ ] `tailwind.config.ts` - Styling configuration
+   - [ ] `tsconfig.json` - TypeScript settings
+   - [ ] `client/` folder structure
+   - [ ] Key components and pages
+   - [ ] Design system (colors, typography)
+
+3. **Then ask Claude Code to generate comprehensive README:**
+   ```
+   Based on your exploration, please generate a comprehensive README.md that includes:
+
+   - Project description
+   - Tech stack
+   - Installation instructions
+   - Development commands
+   - Project structure
+   - Key dependencies
+   - Configuration overview
+   - Contributing guidelines
+
+   Make it accurate and helpful for new developers.
+   ```
+
+### Expected Output
+
+**Exploration Report:**
+```
+Tech Stack:
+- React 18.3.1 with TypeScript
+- Vite 7.1.2 (build tool)
+- Tailwind CSS 4.0.1
+- shadcn/ui components
+- React Router 7.1.1
+
+Project Structure:
+- client/ - Frontend application
+  - components/ - Reusable UI components
+  - pages/ - Route pages
+  - contexts/ - React contexts
+  - hooks/ - Custom hooks
+
+Design System:
+- Navy (#172554) - Headers
+- Sage-green (120 25% 65%) - CTAs
+- Teal (#007380) - Links
+- Charcoal (#3f4751) - Body text
+```
+
+**Generated README.md** should include:
+- Clear project description
+- Prerequisites (Node.js version, pnpm)
+- Installation steps
+- Development commands (`pnpm dev`, `pnpm build`)
+- Project structure diagram
+- Tech stack breakdown
+- Configuration file explanations
+
+### Detailed Guide
+
+See **[CODEBASE_EXPLORATION_GUIDE.md](CODEBASE_EXPLORATION_GUIDE.md)** for:
+- Step-by-step exploration process
+- Questions to ask Claude Code
+- README template
+- Best practices for codebase analysis
+- Real example from AcciLink project
+
+### Checklist
+
+- [ ] Download code from builder.io
+- [ ] Use Claude Code to explore codebase
+- [ ] Review exploration report
+- [ ] Generate README.md using Claude Code
+- [ ] Review and customize README
+- [ ] Commit README to repository
+- [ ] Verify installation instructions work
+- [ ] **THEN** proceed to Step 1 (Git setup)
+
+**Time Estimate:** 15-20 minutes
+
+**Discussion Points:**
+- Should codebase exploration be required for all new projects?
+- Who is responsible for keeping README up to date?
+- Should we create exploration templates for different project types?
 
 ---
 
