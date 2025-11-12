@@ -20,7 +20,7 @@ export function Header() {
     { label: "How It Works", href: "#how-it-works" },
     { label: "For Attorneys", href: "#for-attorneys" },
     { label: "For Providers", href: "#for-providers" },
-    { label: "About", href: "#about" },
+    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 

@@ -14,6 +14,7 @@ import Index from "./pages/Index";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
 import { Contact } from "./pages/Contact";
+import { About } from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const AppContent = () => (
         <Route path="/" element={<Index />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route
           path="/dashboard"
           element={
