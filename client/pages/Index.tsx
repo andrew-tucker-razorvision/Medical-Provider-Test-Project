@@ -122,9 +122,19 @@ export default function Index() {
 
               {/* Trust Bar */}
               <div className="text-center md:text-left">
-                <p className="text-gray-600 text-sm mb-4">
-                  ✓ <strong>Trusted by 500+ personal injury law firms</strong> | ⭐ <strong>4.9/5 average rating</strong> | 🔒 <strong>HIPAA compliant</strong>
-                </p>
+                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600">
+                  <span className="flex items-center gap-1">
+                    ✓ <strong className="text-navy">Trusted by 500+ personal injury law firms</strong>
+                  </span>
+                  <span className="hidden sm:inline text-gray-400">|</span>
+                  <span className="flex items-center gap-1">
+                    ⭐ <strong className="text-navy">4.9/5 average rating</strong>
+                  </span>
+                  <span className="hidden sm:inline text-gray-400">|</span>
+                  <span className="flex items-center gap-1">
+                    🔒 <strong className="text-navy">HIPAA compliant</strong>
+                  </span>
+                </div>
               </div>
             </div>
 
