@@ -141,8 +141,8 @@ export default function Index() {
             {/* Right Side Illustration */}
             <div className="hidden lg:flex items-center justify-center lg:col-span-3">
               <img
-                src="https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Professional handshake between attorneys and medical providers"
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80"
+                alt="Professional business meeting with documents and handshake representing medical-legal collaboration"
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
             </div>
@@ -200,8 +200,8 @@ export default function Index() {
             <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/267482/pexels-photo-267482.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Create user profile setup"
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80"
+                  alt="Modern business analytics dashboard on computer screen showing professional interface"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -219,8 +219,8 @@ export default function Index() {
             <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/4792732/pexels-photo-4792732.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Search and connect with providers"
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80"
+                  alt="Professional using laptop for searching and connecting with medical specialists"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -238,8 +238,8 @@ export default function Index() {
             <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/6809657/pexels-photo-6809657.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Coordinate care and appointments"
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80"
+                  alt="Team collaboration meeting with professionals coordinating cases and appointments"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -263,8 +263,8 @@ export default function Index() {
             {/* Image */}
             <div className="order-2 md:order-1">
               <img
-                src="https://images.pexels.com/photos/6077797/pexels-photo-6077797.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Law office with justice scales and attorney workspace"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80"
+                alt="Attorney reviewing legal documents and medical records in professional law office"
                 className="w-full h-80 object-cover rounded-xl shadow-xl"
               />
             </div>
@@ -343,8 +343,8 @@ export default function Index() {
             {/* Image */}
             <div>
               <img
-                src="https://images.pexels.com/photos/6129037/pexels-photo-6129037.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Medical provider in healthcare workspace with modern technology"
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop&q=80"
+                alt="Medical professional consulting with patient in modern healthcare office"
                 className="w-full h-80 object-cover rounded-xl shadow-xl"
               />
             </div>
