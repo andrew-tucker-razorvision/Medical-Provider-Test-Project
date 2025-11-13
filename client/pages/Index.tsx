@@ -135,7 +135,7 @@ export default function Index() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="mb-8">
+              <div className="mb-8 text-center">
                 <Link
                   to="/signup"
                   className="inline-block px-8 py-3 bg-sage-green text-white font-semibold rounded-lg hover:bg-sage-green-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
@@ -148,8 +148,8 @@ export default function Index() {
               </div>
 
               {/* Trust Bar */}
-              <div className="text-center md:text-left">
-                <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-3 text-sm text-gray-600">
+              <div className="text-center">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-3 text-sm text-gray-600">
                   <span className="flex items-center gap-1 whitespace-nowrap">
                     ✓ <strong className="text-navy">Trusted by 500+ personal injury law firms</strong>
                   </span>
