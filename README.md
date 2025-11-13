@@ -413,6 +413,20 @@ git clone <your-fork-url>
 git checkout -b feature/amazing-feature
 ```
 
+**⚠️ Important: Direct commits to `main` are blocked!**
+
+This project has a pre-commit hook that prevents accidental commits to the `main` branch. All changes must go through the feature branch → PR → merge workflow.
+
+If you try to commit directly to `main`, you'll see:
+```
+❌ ERROR: Direct commits to 'main' branch are not allowed!
+```
+
+To bypass in emergencies only (not recommended):
+```bash
+git commit --no-verify
+```
+
 ### 3. Make your changes
 Follow the automated workflow:
 - Create or pick an issue
