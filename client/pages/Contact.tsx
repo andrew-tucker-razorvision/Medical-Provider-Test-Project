@@ -364,10 +364,10 @@ export function Contact() {
                       Email
                     </p>
                     <a
-                      href="mailto:support@accilink.com"
+                      href="mailto:support@mednexus.com"
                       className="text-charcoal text-sm hover:text-teal transition-colors"
                     >
-                      support@accilink.com
+                      support@mednexus.com
                     </a>
                   </div>
                 </div>

@@ -1,8 +1,8 @@
-# AcciLink
+# MedNexus
 
 > A full-stack platform connecting attorneys with medical providers for personal injury cases
 
-AcciLink is a comprehensive medical-legal networking platform that streamlines case management and improves client outcomes by connecting law firms with vetted medical professionals specializing in personal injury cases.
+MedNexus is a comprehensive medical-legal networking platform that streamlines case management and improves client outcomes by connecting law firms with vetted medical professionals specializing in personal injury cases.
 
 ---
 

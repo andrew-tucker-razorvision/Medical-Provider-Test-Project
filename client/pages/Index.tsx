@@ -25,7 +25,7 @@ export default function Index() {
   const testimonials = [
     {
       quote:
-        "AcciLink has transformed how we connect clients with medical care. The response time is incredible, and the provider network is exactly what we needed for our personal injury cases.",
+        "MedNexus has transformed how we connect clients with medical care. The response time is incredible, and the provider network is exactly what we needed for our personal injury cases.",
       name: "Sarah Mitchell, Esq.",
       title: "Managing Partner, Mitchell & Associates",
       location: "Los Angeles, CA",

@@ -51,7 +51,7 @@ export function Login() {
     try {
       await login(data);
       toast.success("Login successful!", {
-        description: "Welcome back to AcciLink",
+        description: "Welcome back to MedNexus",
       });
       navigate("/dashboard");
     } catch (error) {
@@ -78,7 +78,7 @@ export function Login() {
               Welcome Back
             </CardTitle>
             <CardDescription className="text-charcoal">
-              Sign in to your AcciLink account
+              Sign in to your MedNexus account
             </CardDescription>
           </CardHeader>
 

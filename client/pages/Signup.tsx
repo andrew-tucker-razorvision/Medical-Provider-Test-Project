@@ -133,7 +133,7 @@ export function Signup() {
       };
       await registerUser(credentials);
       toast.success("Account created successfully!", {
-        description: "Welcome to AcciLink!",
+        description: "Welcome to MedNexus!",
       });
       navigate("/dashboard");
     } catch (error) {
@@ -154,7 +154,7 @@ export function Signup() {
       };
       await registerUser(credentials);
       toast.success("Account created successfully!", {
-        description: "Welcome to AcciLink!",
+        description: "Welcome to MedNexus!",
       });
       navigate("/dashboard");
     } catch (error) {
@@ -174,7 +174,7 @@ export function Signup() {
       <section className="py-8 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Create Your AcciLink Account
+            Create Your MedNexus Account
           </h1>
           <p className="text-lg text-charcoal mb-6">
             Join 500+ law firms and 2,000+ medical providers

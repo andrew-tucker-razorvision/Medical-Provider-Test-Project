@@ -1,7 +1,7 @@
 /**
  * About Page
  * Professional about page with company story, mission, values, and trust indicators
- * Builds credibility and explains AcciLink's purpose to attorneys and medical providers
+ * Builds credibility and explains MedNexus's purpose to attorneys and medical providers
  */
 
 import {
@@ -87,7 +87,7 @@ export function About() {
           Transforming Medical-Legal Coordination
         </h1>
         <p className="text-charcoal text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-          AcciLink bridges the gap between personal injury attorneys and medical
+          MedNexus bridges the gap between personal injury attorneys and medical
           professionals, streamlining case coordination and improving outcomes
           for everyone involved.
         </p>
@@ -102,7 +102,7 @@ export function About() {
           </h2>
           <div className="space-y-6 text-charcoal text-lg leading-relaxed">
             <p>
-              AcciLink was born from a simple observation: personal injury
+              MedNexus was born from a simple observation: personal injury
               attorneys and medical providers were struggling to connect
               efficiently, leading to delayed care, missed opportunities, and
               frustrated clients.
@@ -116,7 +116,7 @@ export function About() {
               administrative burden.
             </p>
             <p>
-              We built AcciLink to solve this problem. Today, our platform
+              We built MedNexus to solve this problem. Today, our platform
               connects over 500 law firms with 2,000+ medical providers across
               the United States, facilitating seamless coordination that benefits
               everyone—especially the clients who need timely, quality care.
@@ -189,11 +189,11 @@ export function About() {
         </div>
       </section>
 
-      {/* Why Choose AcciLink Section */}
+      {/* Why Choose MedNexus Section */}
       <section className="max-w-7xl mx-auto mb-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
-            Why Choose AcciLink
+            Why Choose MedNexus
           </h2>
           <p className="text-charcoal text-lg max-w-2xl mx-auto">
             We've built the most trusted platform for medical-legal coordination
@@ -254,7 +254,7 @@ export function About() {
           </h2>
           <p className="text-gray-100 text-lg mb-8 max-w-2xl mx-auto">
             Join hundreds of law firms and thousands of medical providers who
-            trust AcciLink to coordinate personal injury cases efficiently and
+            trust MedNexus to coordinate personal injury cases efficiently and
             professionally.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

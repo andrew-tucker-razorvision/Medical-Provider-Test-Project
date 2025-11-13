@@ -1,6 +1,6 @@
 /**
  * Features Page Component
- * Showcases AcciLink's key capabilities and benefits for attorneys and providers
+ * Showcases MedNexus's key capabilities and benefits for attorneys and providers
  */
 
 import { Link } from "react-router-dom";
@@ -150,7 +150,7 @@ export function Features() {
             Powerful Features for Seamless Medical-Legal Coordination
           </h1>
           <p className="text-lg md:text-xl text-charcoal mb-8 leading-relaxed">
-            AcciLink brings together attorneys and medical providers with enterprise-grade tools designed
+            MedNexus brings together attorneys and medical providers with enterprise-grade tools designed
             specifically for efficient case coordination and secure collaboration.
           </p>
           <div className="h-1 w-24 bg-sage-green mx-auto"></div>
@@ -357,7 +357,7 @@ export function Features() {
             Ready to Experience These Features?
           </h2>
           <p className="text-lg text-charcoal mb-8">
-            Join thousands of legal and medical professionals who trust AcciLink for seamless coordination.
+            Join thousands of legal and medical professionals who trust MedNexus for seamless coordination.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

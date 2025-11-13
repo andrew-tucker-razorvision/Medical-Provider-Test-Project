@@ -1,6 +1,6 @@
 /**
  * Pricing Page Component
- * Showcases AcciLink's hybrid subscription pricing model for attorneys and providers
+ * Showcases MedNexus's hybrid subscription pricing model for attorneys and providers
  */
 
 import { useState } from "react";
@@ -151,7 +151,7 @@ export function Pricing() {
     {
       question: "What's included in the free trial?",
       answer:
-        "You get full access to all features in your chosen plan for 14 days. No credit card required to start. You can test all the features, connect with professionals, and see how AcciLink works for your practice before committing.",
+        "You get full access to all features in your chosen plan for 14 days. No credit card required to start. You can test all the features, connect with professionals, and see how MedNexus works for your practice before committing.",
     },
     {
       question: "Can I switch plans anytime?",
@@ -176,7 +176,7 @@ export function Pricing() {
     {
       question: "How is commission calculated?",
       answer:
-        "Commission is calculated as a percentage of the service fee charged for each successfully completed case. For example, if you charge $1,000 for a medical evaluation and you're on the Professional plan (5% commission), AcciLink would charge $50. You receive detailed invoices showing all commission charges.",
+        "Commission is calculated as a percentage of the service fee charged for each successfully completed case. For example, if you charge $1,000 for a medical evaluation and you're on the Professional plan (5% commission), MedNexus would charge $50. You receive detailed invoices showing all commission charges.",
     },
     {
       question: "Can I cancel anytime?",
@@ -186,7 +186,7 @@ export function Pricing() {
     {
       question: "Do you offer refunds?",
       answer:
-        "Yes! We offer a 30-day money-back guarantee on your first payment. If you're not satisfied with AcciLink for any reason within the first 30 days, contact our support team for a full refund. Subsequent months are non-refundable but you can cancel anytime.",
+        "Yes! We offer a 30-day money-back guarantee on your first payment. If you're not satisfied with MedNexus for any reason within the first 30 days, contact our support team for a full refund. Subsequent months are non-refundable but you can cancel anytime.",
     },
   ];
 
@@ -321,7 +321,7 @@ export function Pricing() {
             <div>
               <Users className="w-12 h-12 text-sage-green mx-auto mb-4" />
               <div className="text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-white/80">Law Firms Trust AcciLink</div>
+              <div className="text-white/80">Law Firms Trust MedNexus</div>
             </div>
             <div>
               <Award className="w-12 h-12 text-sage-green mx-auto mb-4" />
@@ -341,7 +341,7 @@ export function Pricing() {
           </div>
 
           <div className="mt-16 text-center">
-            <h3 className="text-3xl font-bold text-white mb-8">Why Choose AcciLink Pricing?</h3>
+            <h3 className="text-3xl font-bold text-white mb-8">Why Choose MedNexus Pricing?</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="flex flex-col items-center">
                 <CheckCircle className="w-8 h-8 text-sage-green mb-3" />
@@ -399,7 +399,7 @@ export function Pricing() {
             Trusted by Leading Professionals
           </h2>
           <p className="text-lg text-charcoal mb-12">
-            Join 500+ law firms and 2,000+ medical providers who trust AcciLink
+            Join 500+ law firms and 2,000+ medical providers who trust MedNexus
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -411,7 +411,7 @@ export function Pricing() {
                   ))}
                 </div>
                 <p className="text-charcoal italic mb-4">
-                  "AcciLink has streamlined our medical coordination process. The pricing is fair and transparent,
+                  "MedNexus has streamlined our medical coordination process. The pricing is fair and transparent,
                   and we've saved thousands in administrative costs."
                 </p>
                 <p className="font-semibold text-navy">Sarah Johnson</p>
@@ -443,7 +443,7 @@ export function Pricing() {
                   ))}
                 </div>
                 <p className="text-charcoal italic mb-4">
-                  "We switched from our old system to AcciLink and haven't looked back. The ROI was clear within
+                  "We switched from our old system to MedNexus and haven't looked back. The ROI was clear within
                   the first month. Highly recommend!"
                 </p>
                 <p className="font-semibold text-navy">Robert Martinez</p>
