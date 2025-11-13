@@ -7,8 +7,8 @@
 import { createContext, useState, useEffect, ReactNode } from "react";
 import { User, LoginCredentials, RegisterCredentials } from "../../shared/types/auth";
 
-// API base URL
-const API_URL = "http://localhost:3000/api/auth";
+// API base URL (same port as Vite dev server since Express is integrated)
+const API_URL = "/api/auth";
 
 interface AuthContextType {
   user: User | null;
