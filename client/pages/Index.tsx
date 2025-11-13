@@ -142,14 +142,14 @@ export default function Index() {
                 >
                   Start 14-Day Free Trial
                 </Link>
-                <p className="text-sm text-gray-600 mt-3">
+                <p className="text-sm text-muted-foreground mt-3">
                   No credit card required • Cancel anytime
                 </p>
               </div>
 
               {/* Trust Bar */}
               <div className="text-center">
-                <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-3 text-sm text-gray-600">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-3 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1 whitespace-nowrap">
                     ✓ <strong className="text-primary">Trusted by 500+ personal injury law firms</strong>
                   </span>
@@ -256,28 +256,28 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
             {/* Stat 1 */}
-            <div className="text-center md:border-r md:border-gray-600 md:border-r-opacity-20">
+            <div className="text-center md:border-r md:border-muted-foreground md:border-r-opacity-20">
               <Shield className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">500+</div>
-              <div className="text-gray-300 text-lg">Law Firms</div>
+              <div className="text-muted-foreground text-lg">Law Firms</div>
             </div>
             {/* Stat 2 */}
-            <div className="text-center md:border-r md:border-gray-600 md:border-r-opacity-20">
+            <div className="text-center md:border-r md:border-muted-foreground md:border-r-opacity-20">
               <Stethoscope className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">2,000+</div>
-              <div className="text-gray-300 text-lg">Medical Providers</div>
+              <div className="text-muted-foreground text-lg">Medical Providers</div>
             </div>
             {/* Stat 3 */}
-            <div className="text-center md:border-r md:border-gray-600 md:border-r-opacity-20">
+            <div className="text-center md:border-r md:border-muted-foreground md:border-r-opacity-20">
               <FileText className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">50,000+</div>
-              <div className="text-gray-300 text-lg">Cases Coordinated</div>
+              <div className="text-muted-foreground text-lg">Cases Coordinated</div>
             </div>
             {/* Stat 4 */}
             <div className="text-center">
               <Clock className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">24hr</div>
-              <div className="text-gray-300 text-lg">Avg. Response Time</div>
+              <div className="text-muted-foreground text-lg">Avg. Response Time</div>
             </div>
           </div>
         </div>
@@ -418,7 +418,7 @@ export default function Index() {
               <p className="text-foreground text-lg mb-1">
                 {testimonials[currentTestimonial].title}
               </p>
-              <p className="text-gray-600 text-base">
+              <p className="text-muted-foreground text-base">
                 {testimonials[currentTestimonial].location}
               </p>
             </div>
@@ -446,7 +446,7 @@ export default function Index() {
                     className={`w-3 h-3 rounded-full transition-colors ${
                       index === currentTestimonial
                         ? "bg-teal"
-                        : "bg-gray-300"
+                        : "bg-muted"
                     }`}
                   />
                 ))}
@@ -483,7 +483,7 @@ export default function Index() {
               <div key={index} className="bg-muted rounded-lg overflow-hidden">
                 <button
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-accent transition-colors duration-200"
                 >
                   <span className="text-lg font-semibold text-primary pr-8">
                     {faq.question}
