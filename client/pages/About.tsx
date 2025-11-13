@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "../components/ui/card";
 import { Button } from "../components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Shield,
   Zap,
@@ -257,12 +258,16 @@ export function About() {
             professionally.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-sage-green hover:bg-sage-green/90 text-white font-semibold px-8 py-6 text-lg">
-              Sign Up as Attorney
-            </Button>
-            <Button className="bg-white hover:bg-gray-100 text-navy font-semibold px-8 py-6 text-lg">
-              Sign Up as Provider
-            </Button>
+            <Link to="/signup?type=attorney">
+              <Button className="bg-sage-green hover:bg-sage-green/90 text-white font-semibold px-8 py-6 text-lg">
+                Sign Up as Attorney
+              </Button>
+            </Link>
+            <Link to="/signup?type=provider">
+              <Button className="bg-white hover:bg-gray-100 text-navy font-semibold px-8 py-6 text-lg">
+                Sign Up as Provider
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

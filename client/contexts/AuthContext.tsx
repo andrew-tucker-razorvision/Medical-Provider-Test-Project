@@ -5,7 +5,7 @@
  */
 
 import { createContext, useState, useEffect, ReactNode } from "react";
-import { User, LoginCredentials } from "../../shared/types/auth";
+import { User, LoginCredentials, RegisterCredentials } from "../../shared/types/auth";
 
 // Mock user database
 const MOCK_USERS = {
@@ -28,6 +28,7 @@ const MOCK_USERS = {
 interface AuthContextType {
   user: User | null;
   login: (credentials: LoginCredentials) => Promise<void>;
+  register: (credentials: RegisterCredentials) => Promise<void>;
   logout: () => void;
   isAuthenticated: boolean;
 }
@@ -78,6 +79,49 @@ export function AuthProvider({ children }: AuthProviderProps) {
     localStorage.setItem("auth_user", JSON.stringify(authenticatedUser));
   };
 
+  const register = async (credentials: RegisterCredentials): Promise<void> => {
+    // Simulate API delay
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    // Check if email already exists
+    const registeredUsers = JSON.parse(localStorage.getItem("registered_users") || "[]");
+    const emailExists = registeredUsers.some((u: any) => u.email === credentials.email);
+
+    if (emailExists || MOCK_USERS[credentials.email as keyof typeof MOCK_USERS]) {
+      throw new Error("Email already registered");
+    }
+
+    // Create new user
+    const newUser: User = {
+      id: Date.now().toString(),
+      email: credentials.email,
+      name: credentials.fullName,
+      userType: credentials.userType,
+      phone: credentials.phone,
+      // Attorney-specific fields
+      firmName: credentials.firmName,
+      barNumber: credentials.barNumber,
+      statesOfPractice: credentials.statesOfPractice,
+      firmSize: credentials.firmSize,
+      // Provider-specific fields
+      practiceName: credentials.practiceName,
+      professionalTitle: credentials.professionalTitle,
+      licenseNumber: credentials.licenseNumber,
+      statesLicensed: credentials.statesLicensed,
+      yearsExperience: credentials.yearsExperience,
+      // Pricing
+      pricingPlan: credentials.pricingPlan,
+    };
+
+    // Store user with password in mock database
+    registeredUsers.push({ ...newUser, password: credentials.password });
+    localStorage.setItem("registered_users", JSON.stringify(registeredUsers));
+
+    // Auto-login the user
+    setUser(newUser);
+    localStorage.setItem("auth_user", JSON.stringify(newUser));
+  };
+
   const logout = () => {
     setUser(null);
     localStorage.removeItem("auth_user");
@@ -86,6 +130,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const value: AuthContextType = {
     user,
     login,
+    register,
     logout,
     isAuthenticated: !!user,
   };

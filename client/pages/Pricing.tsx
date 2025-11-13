@@ -4,6 +4,7 @@
  */
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { CheckCircle, X, Briefcase, Stethoscope, Shield, Zap, Users, Award, HelpCircle, Star } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
@@ -284,16 +285,21 @@ export function Pricing() {
                   </ul>
                 </CardContent>
                 <CardFooter className="flex flex-col gap-2 pt-6">
-                  <Button
-                    className={`w-full ${
-                      tier.popular
-                        ? "bg-sage-green text-white hover:bg-sage-green/90"
-                        : "bg-sage-green text-white hover:bg-sage-green/90"
-                    }`}
-                    size="lg"
+                  <Link
+                    to={`/signup?type=${userType}&plan=${tier.name.toLowerCase()}`}
+                    className="w-full"
                   >
-                    {tier.cta}
-                  </Button>
+                    <Button
+                      className={`w-full ${
+                        tier.popular
+                          ? "bg-sage-green text-white hover:bg-sage-green/90"
+                          : "bg-sage-green text-white hover:bg-sage-green/90"
+                      }`}
+                      size="lg"
+                    >
+                      {tier.cta}
+                    </Button>
+                  </Link>
                   {tier.price !== null && tier.price > 0 && (
                     <p className="text-xs text-center text-charcoal">14-day free trial • No credit card required</p>
                   )}
@@ -458,20 +464,24 @@ export function Pricing() {
             </CardHeader>
             <CardContent>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button
-                  size="lg"
-                  className="bg-sage-green text-white hover:bg-sage-green/90 px-8 py-6 text-lg font-semibold min-w-[240px]"
-                >
-                  <Briefcase className="w-5 h-5 mr-2" />
-                  Start Free Trial - Attorney
-                </Button>
-                <Button
-                  size="lg"
-                  className="bg-sage-green text-white hover:bg-sage-green/90 px-8 py-6 text-lg font-semibold min-w-[240px]"
-                >
-                  <Stethoscope className="w-5 h-5 mr-2" />
-                  Start Free Trial - Provider
-                </Button>
+                <Link to="/signup?type=attorney">
+                  <Button
+                    size="lg"
+                    className="bg-sage-green text-white hover:bg-sage-green/90 px-8 py-6 text-lg font-semibold min-w-[240px]"
+                  >
+                    <Briefcase className="w-5 h-5 mr-2" />
+                    Start Free Trial - Attorney
+                  </Button>
+                </Link>
+                <Link to="/signup?type=provider">
+                  <Button
+                    size="lg"
+                    className="bg-sage-green text-white hover:bg-sage-green/90 px-8 py-6 text-lg font-semibold min-w-[240px]"
+                  >
+                    <Stethoscope className="w-5 h-5 mr-2" />
+                    Start Free Trial - Provider
+                  </Button>
+                </Link>
               </div>
               <p className="text-center text-white/80 mt-6">
                 Questions? <a href="/contact" className="underline hover:text-sage-green">Contact our sales team</a>
