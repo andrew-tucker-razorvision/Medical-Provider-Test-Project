@@ -525,105 +525,86 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Attorney Starter */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-sm font-semibold text-teal uppercase tracking-wide mb-4">For Attorneys</div>
-              <h3 className="text-2xl font-bold text-navy mb-4">Starter</h3>
+          {/* Pricing Cards - Two Column */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* For Attorneys */}
+            <div className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <Briefcase className="w-8 h-8 text-legal-gold" />
+                <h3 className="text-3xl font-bold text-navy">For Attorneys</h3>
+              </div>
               <div className="mb-6">
-                <span className="text-5xl font-bold text-navy">$99</span>
-                <span className="text-lg text-charcoal">/month</span>
+                <p className="text-lg text-charcoal mb-4">
+                  Connect with vetted medical experts instantly for your personal injury cases
+                </p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-lg text-charcoal">Plans starting at</span>
+                  <span className="text-4xl font-bold text-navy">$99</span>
+                  <span className="text-lg text-charcoal">/month</span>
+                </div>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">10 active cases/month</span>
+                  <span className="text-charcoal">Access to 2,000+ medical providers</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Basic provider search</span>
+                  <span className="text-charcoal">Advanced search and filtering</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Email support</span>
+                  <span className="text-charcoal">Case coordination tools</span>
                 </li>
               </ul>
               <Link
-                to="/pricing"
+                to="/pricing?type=attorney"
                 className="block w-full text-center bg-sage-green text-white font-semibold py-3 px-6 rounded-lg hover:bg-sage-green-600 transition-colors duration-300"
               >
-                View Details →
+                View Attorney Plans →
               </Link>
             </div>
 
-            {/* Provider Practice - Most Popular */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-sage-green relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-sage-green text-white text-sm font-bold px-4 py-1 rounded-full">
-                  Most Popular
-                </span>
+            {/* For Providers */}
+            <div className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <Stethoscope className="w-8 h-8 text-medical-teal" />
+                <h3 className="text-3xl font-bold text-navy">For Providers</h3>
               </div>
-              <div className="text-sm font-semibold text-teal uppercase tracking-wide mb-4">For Providers</div>
-              <h3 className="text-2xl font-bold text-navy mb-4">Practice</h3>
               <div className="mb-6">
-                <span className="text-5xl font-bold text-navy">$49</span>
-                <span className="text-lg text-charcoal">/month</span>
+                <p className="text-lg text-charcoal mb-4">
+                  Grow your practice by connecting with attorneys who need your expertise
+                </p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-lg text-charcoal">Plans starting at</span>
+                  <span className="text-4xl font-bold text-navy">Free</span>
+                </div>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Enhanced profile</span>
+                  <span className="text-charcoal">Reach 500+ law firms instantly</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Priority case matching</span>
+                  <span className="text-charcoal">Professional profile showcase</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Analytics dashboard</span>
+                  <span className="text-charcoal">Direct case opportunities</span>
                 </li>
               </ul>
               <Link
-                to="/pricing"
+                to="/pricing?type=provider"
                 className="block w-full text-center bg-sage-green text-white font-semibold py-3 px-6 rounded-lg hover:bg-sage-green-600 transition-colors duration-300"
               >
-                View Details →
-              </Link>
-            </div>
-
-            {/* Enterprise */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-sm font-semibold text-teal uppercase tracking-wide mb-4">For Large Firms</div>
-              <h3 className="text-2xl font-bold text-navy mb-4">Enterprise</h3>
-              <div className="mb-6">
-                <span className="text-5xl font-bold text-navy">Custom</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Unlimited cases</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Dedicated account manager</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Custom integrations</span>
-                </li>
-              </ul>
-              <Link
-                to="/pricing"
-                className="block w-full text-center bg-navy text-white font-semibold py-3 px-6 rounded-lg hover:bg-navy-dark transition-colors duration-300"
-              >
-                Contact Sales →
+                View Provider Plans →
               </Link>
             </div>
           </div>
 
           <p className="text-center text-charcoal mt-12">
-            All plans include our 24-hour response guarantee and HIPAA-compliant platform •{" "}
+            All plans include 24-hour response guarantee and HIPAA-compliant platform • 14-day free trial •{" "}
             <Link to="/pricing" className="text-teal font-semibold hover:underline">
               See full pricing details
             </Link>
