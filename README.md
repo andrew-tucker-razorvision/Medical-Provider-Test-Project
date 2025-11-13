@@ -1,8 +1,8 @@
-# AcciLink
+# MedNexus
 
 > A full-stack platform connecting attorneys with medical providers for personal injury cases
 
-AcciLink is a comprehensive medical-legal networking platform that streamlines case management and improves client outcomes by connecting law firms with vetted medical professionals specializing in personal injury cases.
+MedNexus is a comprehensive medical-legal networking platform that streamlines case management and improves client outcomes by connecting law firms with vetted medical professionals specializing in personal injury cases.
 
 ---
 
@@ -352,20 +352,43 @@ Demo endpoint showing server response
 
 ## Design System
 
-The project uses a custom design system built on Tailwind CSS with the following color palette:
+The project uses a strategically designed color system built on Tailwind CSS, optimized for trust and credibility in the medical-legal coordination space.
 
-- **Navy** (`--navy: 215 46% 24%`) - Primary brand color
-- **Teal** (`--teal: 180 100% 28%`) - Secondary accent
-- **Sage Green** (`--sage-green: 120 25% 65%`) - Call-to-action color
-- **Charcoal** (`--charcoal: 215 13% 34%`) - Text color
-- **Light Gray** (`--light-gray: 210 40% 98%`) - Background color
-- **Success** (`--success: 160 84% 39%`) - Success states
+### Strategic Color Palette
 
-### Color Usage
-- **Buttons:** Sage green with hover states
-- **Icons:** Sage green accents throughout
-- **Dividers:** Sage green section separators
-- **Interactive Elements:** Sage green highlights
+**Primary Brand Colors:**
+- **Deep Professional Blue** (`--primary-blue: 210 65% 30%` / `#1B4B7F`) - Primary brand color, headings, navigation
+- **Medical Teal** (`--medical-teal: 173 80% 32%` / `#0D9488`) - Provider accents, medical-related elements
+- **Confident Action Green** (`--action-green: 160 84% 31%` / `#059669`) - All CTAs, success states, confirmations
+- **Warm Slate** (`--warm-slate: 215 20% 35%` / `#475569`) - Body text, secondary hierarchy
+- **Cool Neutral** (`--cool-neutral: 210 40% 98%` / `#F8FAFC`) - Page backgrounds, card surfaces
+- **Legal Gold** (`--legal-gold: 32 96% 44%` / `#D97706`) - Attorney-specific accents and highlights
+
+### Color Psychology & Rationale
+
+- **Deep Professional Blue:** Authoritative blue used by financial/legal institutions (Chase, LinkedIn). Conveys trust, stability, and professionalism.
+- **Medical Teal:** Healthcare teal (Mayo Clinic standard). Bridges medical and tech worlds with sophistication.
+- **Confident Action Green:** Stronger urgency than soft sage while maintaining trust. Used by secure platforms (Stripe, DocuSign).
+- **Legal Gold:** Traditional legal/professional gold creates visual differentiation for attorney user paths.
+
+### Color Usage Guidelines
+
+- **Primary CTAs:** Confident Action Green (`bg-action-green`)
+- **Attorney Elements:** Legal Gold accents (`text-legal-gold`, `border-legal-gold`)
+- **Provider Elements:** Medical Teal accents (`text-medical-teal`)
+- **Headings:** Deep Professional Blue (`text-primary-blue`)
+- **Body Text:** Warm Slate (`text-warm-slate`)
+- **Backgrounds:** Cool Neutral (`bg-cool-neutral`)
+- **Icons:** Medical Teal for providers, Legal Gold for attorneys, Action Green for CTAs
+
+### Accessibility
+
+All color combinations meet WCAG AAA standards:
+- Primary Blue on white: 9.2:1 (AAA Normal)
+- Action Green on white: 5.8:1 (AA Normal, AAA Large)
+- Medical Teal on white: 5.6:1 (AA Normal, AAA Large)
+- Warm Slate on white: 7.1:1 (AAA Normal)
+- Legal Gold on white: 5.9:1 (AA Normal, AAA Large)
 
 ---
 

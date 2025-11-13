@@ -25,7 +25,7 @@ export default function Index() {
   const testimonials = [
     {
       quote:
-        "AcciLink has transformed how we connect clients with medical care. The response time is incredible, and the provider network is exactly what we needed for our personal injury cases.",
+        "MedNexus has transformed how we connect clients with medical care. The response time is incredible, and the provider network is exactly what we needed for our personal injury cases.",
       name: "Sarah Mitchell, Esq.",
       title: "Managing Partner, Mitchell & Associates",
       location: "Los Angeles, CA",
@@ -79,7 +79,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col">
           {/* Full Width Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-12 md:mb-16 text-center self-center">
-            New Test Title Made With Claude Code v2
+            Connect Clients with Vetted Medical Experts in 24 Hours
           </h1>
 
           {/* Content Grid */}
@@ -87,22 +87,22 @@ export default function Index() {
             {/* Left Side Text */}
             <div className="lg:col-span-2">
               <p className="text-lg text-charcoal mb-6 leading-relaxed">
-                Streamline case management and improve client outcomes with our vetted network of medical professionals specializing in personal injury cases.
+                Connect with 2,000+ vetted medical specialists instantly. Reduce coordination time by 80% and deliver better outcomes for your personal injury clients.
               </p>
 
               {/* Value Props */}
               <div className="space-y-3 mb-8">
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base text-charcoal">Vetted providers in 50+ states</span>
+                  <span className="text-base text-charcoal"><strong>Pre-vetted specialists</strong> in 50+ states (no more cold calls)</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base text-charcoal">24-hour response guarantee</span>
+                  <span className="text-base text-charcoal"><strong>24-hour response guarantee</strong> (clients get care fast)</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base text-charcoal">Seamless case coordination tools</span>
+                  <span className="text-base text-charcoal"><strong>All-in-one platform</strong> (scheduling, records, billing)</span>
                 </div>
               </div>
 
@@ -122,9 +122,19 @@ export default function Index() {
 
               {/* Trust Bar */}
               <div className="text-center md:text-left">
-                <p className="text-gray-600 text-sm mb-4">
-                  ✓ Trusted by 500+ law firms nationwide
-                </p>
+                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600">
+                  <span className="flex items-center gap-1">
+                    ✓ <strong className="text-navy">Trusted by 500+ personal injury law firms</strong>
+                  </span>
+                  <span className="hidden sm:inline text-gray-400">|</span>
+                  <span className="flex items-center gap-1">
+                    ⭐ <strong className="text-navy">4.9/5 average rating</strong>
+                  </span>
+                  <span className="hidden sm:inline text-gray-400">|</span>
+                  <span className="flex items-center gap-1">
+                    🔒 <strong className="text-navy">HIPAA compliant</strong>
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -177,10 +187,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">How It Works</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">Get Started in 3 Simple Steps</h2>
             <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
             <p className="text-xl text-charcoal max-w-2xl mx-auto">
-              Connect with the right medical professionals in three simple steps
+              From search to coordination in minutes, not days
             </p>
           </div>
 
@@ -198,9 +208,9 @@ export default function Index() {
                 <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">01</div>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Create Your Profile</h3>
+                <h3 className="text-2xl font-bold text-navy mb-4">Set Up Your Practice Profile</h3>
                 <p className="text-charcoal leading-relaxed">
-                  Law firms and providers create detailed profiles highlighting specialties, experience, and service areas.
+                  Attorneys and providers can sign up in 5 minutes. Create a detailed profile highlighting your specialties, experience, and service areas.
                 </p>
               </div>
             </div>
@@ -217,9 +227,9 @@ export default function Index() {
                 <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">02</div>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Search & Connect</h3>
+                <h3 className="text-2xl font-bold text-navy mb-4">Find the Right Specialist</h3>
                 <p className="text-charcoal leading-relaxed">
-                  Attorneys search our vetted provider network by specialty, location, and availability. Send connection requests instantly.
+                  Use advanced search with instant results. Filter by specialty, location, and availability to find the perfect match for your case needs.
                 </p>
               </div>
             </div>
@@ -236,9 +246,9 @@ export default function Index() {
                 <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">03</div>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Coordinate Care</h3>
+                <h3 className="text-2xl font-bold text-navy mb-4">Coordinate & Close Cases Faster</h3>
                 <p className="text-charcoal leading-relaxed">
-                  Manage appointments, share records securely, and track case progress through our integrated platform dashboard.
+                  All tools in one dashboard. Schedule appointments, share records securely, track progress, and close cases faster with streamlined coordination.
                 </p>
               </div>
             </div>

@@ -14,7 +14,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">AcciLink</h3>
+            <h3 className="text-2xl font-bold mb-4">MedNexus</h3>
             <p className="text-gray-400 text-sm mb-6">
               Connecting legal and medical professionals for better client outcomes
             </p>
@@ -127,11 +127,11 @@ export function Footer() {
             {/* Contact Info */}
             <div className="mt-6 space-y-2">
               <a
-                href="mailto:support@accilink.com"
+                href="mailto:support@mednexus.com"
                 className="flex items-center text-gray-400 text-sm hover:text-teal transition-colors"
               >
                 <Mail className="w-4 h-4 mr-2" />
-                support@accilink.com
+                support@mednexus.com
               </a>
               <a
                 href="tel:+15551234567"
@@ -150,7 +150,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 AcciLink. All rights reserved.
+              © 2024 MedNexus. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
