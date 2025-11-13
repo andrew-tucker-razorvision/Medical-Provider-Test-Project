@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // New strategic color palette
+        "primary-blue": "hsl(var(--primary-blue))",
+        "medical-teal": "hsl(var(--medical-teal))",
+        "action-green": "hsl(var(--action-green))",
+        "warm-slate": "hsl(var(--warm-slate))",
+        "cool-neutral": "hsl(var(--cool-neutral))",
+        "legal-gold": "hsl(var(--legal-gold))",
+
+        // Legacy colors (deprecated - maintained for backward compatibility)
         navy: "hsl(var(--navy))",
         teal: "hsl(var(--teal))",
         "sage-green": "hsl(var(--sage-green))",

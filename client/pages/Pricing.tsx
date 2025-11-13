@@ -233,13 +233,17 @@ export function Pricing() {
                 key={index}
                 className={`relative bg-white border-2 transition-all duration-300 ${
                   tier.popular
-                    ? "border-sage-green shadow-xl scale-105"
+                    ? userType === "attorney"
+                      ? "border-legal-gold shadow-xl scale-105"
+                      : "border-medical-teal shadow-xl scale-105"
                     : "border-gray-200 hover:shadow-xl hover:-translate-y-1"
                 }`}
               >
                 {tier.badge && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-sage-green text-white px-4 py-1 text-sm font-semibold">
+                    <Badge className={`${
+                      userType === "attorney" ? "bg-legal-gold" : "bg-medical-teal"
+                    } text-white px-4 py-1 text-sm font-semibold`}>
                       {tier.badge}
                     </Badge>
                   </div>

@@ -20,8 +20,8 @@ import { useAuth } from "../hooks/useAuth";
 import { toast } from "sonner";
 import type { RegisterCredentials } from "@/shared/types/auth";
 
-// Common validation schema
-const commonSchema = z.object({
+// Common validation schema (base fields without refine)
+const commonSchemaBase = z.object({
   email: z.string().email("Please enter a valid email address"),
   password: z.string()
     .min(8, "Password must be at least 8 characters")
@@ -33,23 +33,23 @@ const commonSchema = z.object({
   agreeToTerms: z.boolean().refine(val => val === true, {
     message: "You must agree to the terms and conditions",
   }),
-}).refine(data => data.password === data.confirmPassword, {
-  message: "Passwords do not match",
-  path: ["confirmPassword"],
 });
 
 // Attorney schema
-const attorneySchema = commonSchema.extend({
+const attorneySchema = commonSchemaBase.extend({
   userType: z.literal("attorney"),
   firmName: z.string().min(2, "Firm name must be at least 2 characters"),
   barNumber: z.string().min(5, "Bar number must be at least 5 characters"),
   statesOfPractice: z.string().min(1, "Please select at least one state"),
   firmSize: z.string().min(1, "Please select firm size"),
   pricingPlan: z.string().min(1, "Please select a pricing plan"),
+}).refine(data => data.password === data.confirmPassword, {
+  message: "Passwords do not match",
+  path: ["confirmPassword"],
 });
 
 // Provider schema
-const providerSchema = commonSchema.extend({
+const providerSchema = commonSchemaBase.extend({
   userType: z.literal("provider"),
   practiceName: z.string().min(2, "Practice name must be at least 2 characters"),
   professionalTitle: z.string().min(1, "Please select your professional title"),
@@ -58,6 +58,9 @@ const providerSchema = commonSchema.extend({
   yearsExperience: z.coerce.number().min(0).max(70, "Years must be between 0 and 70"),
   pricingPlan: z.string().min(1, "Please select a pricing plan"),
   phone: z.string().min(1, "Phone number is required for providers"),
+}).refine(data => data.password === data.confirmPassword, {
+  message: "Passwords do not match",
+  path: ["confirmPassword"],
 });
 
 type AttorneyFormData = z.infer<typeof attorneySchema>;
