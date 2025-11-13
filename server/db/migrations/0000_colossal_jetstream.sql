@@ -1,0 +1,21 @@
+CREATE TABLE "users" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"email" varchar(255) NOT NULL,
+	"password_hash" varchar(255) NOT NULL,
+	"full_name" varchar(255) NOT NULL,
+	"user_type" varchar(50) NOT NULL,
+	"phone" varchar(50),
+	"firm_name" varchar(255),
+	"bar_number" varchar(100),
+	"states_of_practice" text,
+	"firm_size" varchar(50),
+	"practice_name" varchar(255),
+	"professional_title" varchar(100),
+	"license_number" varchar(100),
+	"states_licensed" text,
+	"years_experience" integer,
+	"pricing_plan" varchar(50),
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "users_email_unique" UNIQUE("email")
+);
