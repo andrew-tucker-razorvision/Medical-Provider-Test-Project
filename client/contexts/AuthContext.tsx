@@ -1,29 +1,14 @@
 /**
  * AuthContext
  * Provides authentication state and functions throughout the application
- * Uses mock authentication with hardcoded test credentials
+ * Uses real backend API with PostgreSQL database and JWT tokens
  */
 
 import { createContext, useState, useEffect, ReactNode } from "react";
 import { User, LoginCredentials, RegisterCredentials } from "../../shared/types/auth";
 
-// Mock user database
-const MOCK_USERS = {
-  "attorney@test.com": {
-    id: "1",
-    email: "attorney@test.com",
-    name: "John Attorney",
-    userType: "attorney" as const,
-    password: "password123",
-  },
-  "provider@test.com": {
-    id: "2",
-    email: "provider@test.com",
-    name: "Dr. Sarah Provider",
-    userType: "provider" as const,
-    password: "password123",
-  },
-};
+// API base URL
+const API_URL = "http://localhost:3000/api/auth";
 
 interface AuthContextType {
   user: User | null;
@@ -44,87 +29,88 @@ interface AuthProviderProps {
 export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
 
-  // Load user from localStorage on mount
+  // Load user from token on mount
   useEffect(() => {
-    const storedUser = localStorage.getItem("auth_user");
-    if (storedUser) {
-      try {
-        setUser(JSON.parse(storedUser));
-      } catch (error) {
-        console.error("Failed to parse stored user:", error);
-        localStorage.removeItem("auth_user");
+    const loadUser = async () => {
+      const token = localStorage.getItem("auth_token");
+      if (token) {
+        try {
+          const response = await fetch(`${API_URL}/me`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            setUser(data.user);
+          } else {
+            // Token invalid or expired
+            localStorage.removeItem("auth_token");
+          }
+        } catch (error) {
+          console.error("Failed to load user:", error);
+          localStorage.removeItem("auth_token");
+        }
       }
-    }
+    };
+
+    loadUser();
   }, []);
 
   const login = async (credentials: LoginCredentials): Promise<void> => {
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    try {
+      const response = await fetch(`${API_URL}/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(credentials),
+      });
 
-    const mockUser = MOCK_USERS[credentials.email as keyof typeof MOCK_USERS];
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || "Login failed");
+      }
 
-    if (!mockUser || mockUser.password !== credentials.password) {
-      throw new Error("Invalid email or password");
+      const { user, token } = await response.json();
+
+      // Store token and user
+      localStorage.setItem("auth_token", token);
+      setUser(user);
+    } catch (error) {
+      throw error;
     }
-
-    // Create user object without password
-    const authenticatedUser: User = {
-      id: mockUser.id,
-      email: mockUser.email,
-      name: mockUser.name,
-      userType: mockUser.userType,
-    };
-
-    setUser(authenticatedUser);
-    localStorage.setItem("auth_user", JSON.stringify(authenticatedUser));
   };
 
   const register = async (credentials: RegisterCredentials): Promise<void> => {
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    try {
+      const response = await fetch(`${API_URL}/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(credentials),
+      });
 
-    // Check if email already exists
-    const registeredUsers = JSON.parse(localStorage.getItem("registered_users") || "[]");
-    const emailExists = registeredUsers.some((u: any) => u.email === credentials.email);
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || "Registration failed");
+      }
 
-    if (emailExists || MOCK_USERS[credentials.email as keyof typeof MOCK_USERS]) {
-      throw new Error("Email already registered");
+      const { user, token } = await response.json();
+
+      // Store token and user
+      localStorage.setItem("auth_token", token);
+      setUser(user);
+    } catch (error) {
+      throw error;
     }
-
-    // Create new user
-    const newUser: User = {
-      id: Date.now().toString(),
-      email: credentials.email,
-      name: credentials.fullName,
-      userType: credentials.userType,
-      phone: credentials.phone,
-      // Attorney-specific fields
-      firmName: credentials.firmName,
-      barNumber: credentials.barNumber,
-      statesOfPractice: credentials.statesOfPractice,
-      firmSize: credentials.firmSize,
-      // Provider-specific fields
-      practiceName: credentials.practiceName,
-      professionalTitle: credentials.professionalTitle,
-      licenseNumber: credentials.licenseNumber,
-      statesLicensed: credentials.statesLicensed,
-      yearsExperience: credentials.yearsExperience,
-      // Pricing
-      pricingPlan: credentials.pricingPlan,
-    };
-
-    // Store user with password in mock database
-    registeredUsers.push({ ...newUser, password: credentials.password });
-    localStorage.setItem("registered_users", JSON.stringify(registeredUsers));
-
-    // Auto-login the user
-    setUser(newUser);
-    localStorage.setItem("auth_user", JSON.stringify(newUser));
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem("auth_user");
+    localStorage.removeItem("auth_token");
   };
 
   const value: AuthContextType = {
