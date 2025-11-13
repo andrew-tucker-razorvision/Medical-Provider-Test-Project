@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {
   ChevronRight,
   Check,
-  Play,
   Shield,
   Stethoscope,
   FileText,
@@ -16,11 +15,40 @@ import {
   ChevronRight as ChevronRightIcon,
   Briefcase,
   Plus,
+  ChevronDown,
 } from "lucide-react";
 
 export default function Index() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "How long does setup take?",
+      answer: "Most users complete setup in under 5 minutes. Simply create your profile, add your credentials and specialties, and you're ready to start connecting. Our onboarding team is available to help if needed."
+    },
+    {
+      question: "What's included in the free trial?",
+      answer: "The 14-day free trial includes full access to all features in your chosen plan. You can search providers, coordinate cases, and use all platform tools. No credit card required to start."
+    },
+    {
+      question: "How does pricing work?",
+      answer: "We offer simple monthly subscriptions starting at $49 for providers and $99 for attorneys. Plans scale based on your needs with transparent pricing and no hidden fees. See our Pricing page for full details."
+    },
+    {
+      question: "Is my data secure and HIPAA compliant?",
+      answer: "Yes, absolutely. MedNexus is fully HIPAA compliant with bank-level 256-bit encryption. All data is securely stored and transmitted. We undergo regular security audits and maintain strict privacy standards."
+    },
+    {
+      question: "Can I integrate with my existing tools?",
+      answer: "Yes, we offer integrations with popular case management systems, calendars, and communication tools. Enterprise plans include custom API access for seamless integration with your existing workflow."
+    },
+    {
+      question: "What happens after the trial ends?",
+      answer: "After your 14-day trial, you can choose to continue with a paid subscription or cancel anytime. There's no automatic billing during the trial period, and we'll remind you before it ends."
+    }
+  ];
 
   const testimonials = [
     {
@@ -107,31 +135,30 @@ export default function Index() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
+              <div className="mb-8 text-center">
                 <Link
                   to="/signup"
-                  className="px-8 py-3 bg-sage-green text-white font-semibold rounded-lg hover:bg-sage-green-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  className="inline-block px-8 py-3 bg-sage-green text-white font-semibold rounded-lg hover:bg-sage-green-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
-                  Get Started Free
+                  Start 14-Day Free Trial
                 </Link>
-                <a href="#" className="flex items-center text-teal font-semibold hover:underline group">
-                  <Play className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
-                  Watch 2-min demo
-                </a>
+                <p className="text-sm text-gray-600 mt-3">
+                  No credit card required • Cancel anytime
+                </p>
               </div>
 
               {/* Trust Bar */}
-              <div className="text-center md:text-left">
-                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600">
-                  <span className="flex items-center gap-1">
+              <div className="text-center">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-3 text-sm text-gray-600">
+                  <span className="flex items-center gap-1 whitespace-nowrap">
                     ✓ <strong className="text-navy">Trusted by 500+ personal injury law firms</strong>
                   </span>
                   <span className="hidden sm:inline text-gray-400">|</span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 whitespace-nowrap">
                     ⭐ <strong className="text-navy">4.9/5 average rating</strong>
                   </span>
                   <span className="hidden sm:inline text-gray-400">|</span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 whitespace-nowrap">
                     🔒 <strong className="text-navy">HIPAA compliant</strong>
                   </span>
                 </div>
@@ -139,18 +166,92 @@ export default function Index() {
             </div>
 
             {/* Right Side Illustration */}
-            <div className="hidden lg:flex items-center justify-center lg:col-span-3">
+            <div className="lg:col-span-3">
               <img
                 src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80"
                 alt="Professional business meeting with documents and handshake representing medical-legal collaboration"
-                className="w-full h-auto rounded-lg shadow-2xl"
+                className="w-full h-64 md:h-80 lg:h-auto object-cover rounded-lg shadow-2xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: STATS BAR */}
+      {/* SECTION 2: HOW IT WORKS */}
+      <section id="how-it-works" className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">Get Started in 3 Simple Steps</h2>
+            <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
+            <p className="text-xl text-charcoal max-w-2xl mx-auto">
+              From search to coordination in minutes, not days
+            </p>
+          </div>
+
+          {/* Steps Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1 */}
+            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80"
+                  alt="Modern business analytics dashboard on computer screen showing professional interface"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-15"></div>
+                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">01</div>
+              </div>
+              <div className="p-10">
+                <h3 className="text-2xl font-bold text-navy mb-4">Set Up Your Practice Profile</h3>
+                <p className="text-charcoal leading-relaxed">
+                  Attorneys and providers can sign up in 5 minutes. Create a detailed profile highlighting your specialties, experience, and service areas.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80"
+                  alt="Professional using laptop for searching and connecting with medical specialists"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-15"></div>
+                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">02</div>
+              </div>
+              <div className="p-10">
+                <h3 className="text-2xl font-bold text-navy mb-4">Find the Right Specialist</h3>
+                <p className="text-charcoal leading-relaxed">
+                  Use advanced search with instant results. Filter by specialty, location, and availability to find the perfect match for your case needs.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80"
+                  alt="Team collaboration meeting with professionals coordinating cases and appointments"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-15"></div>
+                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">03</div>
+              </div>
+              <div className="p-10">
+                <h3 className="text-2xl font-bold text-navy mb-4">Coordinate & Close Cases Faster</h3>
+                <p className="text-charcoal leading-relaxed">
+                  All tools in one dashboard. Schedule appointments, share records securely, track progress, and close cases faster with streamlined coordination.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: STATS BAR */}
       <section className="w-full bg-navy text-white py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
@@ -177,80 +278,6 @@ export default function Index() {
               <Clock className="w-8 h-8 mx-auto mb-4 text-sage-green" />
               <div className="text-5xl md:text-6xl font-bold mb-2">24hr</div>
               <div className="text-gray-300 text-lg">Avg. Response Time</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: HOW IT WORKS */}
-      <section id="how-it-works" className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Heading */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">Get Started in 3 Simple Steps</h2>
-            <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
-            <p className="text-xl text-charcoal max-w-2xl mx-auto">
-              From search to coordination in minutes, not days
-            </p>
-          </div>
-
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Step 1 */}
-            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80"
-                  alt="Modern business analytics dashboard on computer screen showing professional interface"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">01</div>
-              </div>
-              <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Set Up Your Practice Profile</h3>
-                <p className="text-charcoal leading-relaxed">
-                  Attorneys and providers can sign up in 5 minutes. Create a detailed profile highlighting your specialties, experience, and service areas.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80"
-                  alt="Professional using laptop for searching and connecting with medical specialists"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">02</div>
-              </div>
-              <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Find the Right Specialist</h3>
-                <p className="text-charcoal leading-relaxed">
-                  Use advanced search with instant results. Filter by specialty, location, and availability to find the perfect match for your case needs.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80"
-                  alt="Team collaboration meeting with professionals coordinating cases and appointments"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-                <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">03</div>
-              </div>
-              <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Coordinate & Close Cases Faster</h3>
-                <p className="text-charcoal leading-relaxed">
-                  All tools in one dashboard. Schedule appointments, share records securely, track progress, and close cases faster with streamlined coordination.
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -295,10 +322,10 @@ export default function Index() {
                 </div>
               </div>
 
-              <a href="#" className="text-teal font-semibold text-lg hover:underline inline-flex items-center group">
+              <Link to="/features#attorneys" className="text-teal font-semibold text-lg hover:underline inline-flex items-center group">
                 Learn more for attorneys
                 <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -334,10 +361,10 @@ export default function Index() {
                 </div>
               </div>
 
-              <a href="#" className="text-teal font-semibold text-lg hover:underline inline-flex items-center group">
+              <Link to="/features#providers" className="text-teal font-semibold text-lg hover:underline inline-flex items-center group">
                 Learn more for providers
                 <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
 
             {/* Image */}
@@ -378,6 +405,11 @@ export default function Index() {
               <p className="text-2xl italic text-charcoal mb-8 leading-relaxed">
                 "{testimonials[currentTestimonial].quote}"
               </p>
+
+              {/* Avatar */}
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-sage-green to-teal text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
+                {testimonials[currentTestimonial].name.split(' ').map(n => n[0]).join('')}
+              </div>
 
               {/* Author */}
               <h3 className="text-2xl font-bold text-navy mb-2">
@@ -433,16 +465,182 @@ export default function Index() {
         </div>
       </section>
 
-      {/* SECTION 7: DUAL CTA */}
+      {/* SECTION 7: FAQ */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
+            <p className="text-xl text-charcoal">
+              Everything you need to know about getting started
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-light-gray rounded-lg overflow-hidden">
+                <button
+                  onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200"
+                >
+                  <span className="text-lg font-semibold text-navy pr-8">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-teal flex-shrink-0 transition-transform duration-200 ${
+                      openFAQ === index ? 'transform rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                {openFAQ === index && (
+                  <div className="px-6 pb-5">
+                    <p className="text-charcoal leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-charcoal mt-12">
+            Still have questions?{" "}
+            <Link to="/contact" className="text-teal font-semibold hover:underline">
+              Contact our team
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 8: PRICING PREVIEW */}
+      <section className="py-12 md:py-20 bg-light-gray">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
+            <p className="text-xl text-charcoal max-w-2xl mx-auto">
+              Choose the plan that fits your practice • No long-term contracts
+            </p>
+          </div>
+
+          {/* Pricing Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Attorney Starter */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-sm font-semibold text-teal uppercase tracking-wide mb-4">For Attorneys</div>
+              <h3 className="text-2xl font-bold text-navy mb-4">Starter</h3>
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-navy">$99</span>
+                <span className="text-lg text-charcoal">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">10 active cases/month</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">Basic provider search</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">Email support</span>
+                </li>
+              </ul>
+              <Link
+                to="/pricing"
+                className="block w-full text-center bg-sage-green text-white font-semibold py-3 px-6 rounded-lg hover:bg-sage-green-600 transition-colors duration-300"
+              >
+                View Details →
+              </Link>
+            </div>
+
+            {/* Provider Practice - Most Popular */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-sage-green relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-sage-green text-white text-sm font-bold px-4 py-1 rounded-full">
+                  Most Popular
+                </span>
+              </div>
+              <div className="text-sm font-semibold text-teal uppercase tracking-wide mb-4">For Providers</div>
+              <h3 className="text-2xl font-bold text-navy mb-4">Practice</h3>
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-navy">$49</span>
+                <span className="text-lg text-charcoal">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">Enhanced profile</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">Priority case matching</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">Analytics dashboard</span>
+                </li>
+              </ul>
+              <Link
+                to="/pricing"
+                className="block w-full text-center bg-sage-green text-white font-semibold py-3 px-6 rounded-lg hover:bg-sage-green-600 transition-colors duration-300"
+              >
+                View Details →
+              </Link>
+            </div>
+
+            {/* Enterprise */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-sm font-semibold text-teal uppercase tracking-wide mb-4">For Large Firms</div>
+              <h3 className="text-2xl font-bold text-navy mb-4">Enterprise</h3>
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-navy">Custom</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">Unlimited cases</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">Dedicated account manager</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-charcoal">Custom integrations</span>
+                </li>
+              </ul>
+              <Link
+                to="/pricing"
+                className="block w-full text-center bg-navy text-white font-semibold py-3 px-6 rounded-lg hover:bg-navy-dark transition-colors duration-300"
+              >
+                Contact Sales →
+              </Link>
+            </div>
+          </div>
+
+          <p className="text-center text-charcoal mt-12">
+            All plans include our 24-hour response guarantee and HIPAA-compliant platform •{" "}
+            <Link to="/pricing" className="text-teal font-semibold hover:underline">
+              See full pricing details
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 8: DUAL CTA */}
       <section className="py-12 md:py-20 bg-gradient-to-r from-navy to-navy-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Ready to Transform Your Practice?
+              Join 500+ Law Firms Growing with MedNexus
             </h2>
             <p className="text-xl text-white text-opacity-80 max-w-2xl mx-auto">
-              Join thousands of legal and medical professionals already connected on our platform
+              Limited onboarding spots available this month • Start your 14-day free trial today
             </p>
           </div>
 
