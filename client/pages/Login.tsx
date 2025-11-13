@@ -65,7 +65,7 @@ export function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-light-gray pt-32 pb-16 px-4">
+    <div className="min-h-screen bg-muted pt-32 pb-16 px-4">
       <div className="max-w-md mx-auto">
         <Card className="shadow-lg">
           <CardHeader className="space-y-1 text-center">
@@ -74,10 +74,10 @@ export function Login() {
                 <LogIn className="w-6 h-6 text-white" />
               </div>
             </div>
-            <CardTitle className="text-2xl font-bold text-navy">
+            <CardTitle className="text-2xl font-bold text-primary">
               Welcome Back
             </CardTitle>
-            <CardDescription className="text-charcoal">
+            <CardDescription className="text-foreground">
               Sign in to your MedNexus account
             </CardDescription>
           </CardHeader>
@@ -88,12 +88,12 @@ export function Login() {
               <div className="space-y-2">
                 <Label
                   htmlFor="email"
-                  className="text-sm font-semibold text-navy uppercase tracking-wide"
+                  className="text-sm font-semibold text-primary uppercase tracking-wide"
                 >
                   Email Address
                 </Label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                  <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="email"
                     type="email"
@@ -112,12 +112,12 @@ export function Login() {
               <div className="space-y-2">
                 <Label
                   htmlFor="password"
-                  className="text-sm font-semibold text-navy uppercase tracking-wide"
+                  className="text-sm font-semibold text-primary uppercase tracking-wide"
                 >
                   Password
                 </Label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                  <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="password"
                     type="password"
@@ -149,18 +149,18 @@ export function Login() {
               </div>
 
               {/* Test Credentials Info */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-xs">
-                <p className="font-semibold text-navy mb-1">
+              <div className="bg-muted border border-border rounded-lg p-3 text-xs">
+                <p className="font-semibold text-primary mb-1">
                   Test Credentials:
                 </p>
-                <p className="text-charcoal">
-                  Attorney: <code className="bg-white px-1 rounded">attorney@test.com</code>
+                <p className="text-foreground">
+                  Attorney: <code className="bg-card px-1 rounded">attorney@test.com</code>
                 </p>
-                <p className="text-charcoal">
-                  Provider: <code className="bg-white px-1 rounded">provider@test.com</code>
+                <p className="text-foreground">
+                  Provider: <code className="bg-card px-1 rounded">provider@test.com</code>
                 </p>
-                <p className="text-charcoal">
-                  Password: <code className="bg-white px-1 rounded">password123</code>
+                <p className="text-foreground">
+                  Password: <code className="bg-card px-1 rounded">password123</code>
                 </p>
               </div>
             </CardContent>
@@ -174,7 +174,7 @@ export function Login() {
                 {isLoading ? "Signing in..." : "Sign In"}
               </Button>
 
-              <p className="text-sm text-center text-charcoal">
+              <p className="text-sm text-center text-foreground">
                 Don't have an account?{" "}
                 <Link
                   to="/signup"
@@ -191,7 +191,7 @@ export function Login() {
         <div className="text-center mt-6">
           <Link
             to="/"
-            className="text-sm text-navy hover:text-teal transition-colors"
+            className="text-sm text-primary hover:text-teal transition-colors"
           >
             ← Back to Home
           </Link>

@@ -80,13 +80,13 @@ export function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-light-gray pt-32 pb-16 px-4">
+    <div className="min-h-screen bg-muted pt-32 pb-16 px-4">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto text-center mb-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
           Transforming Medical-Legal Coordination
         </h1>
-        <p className="text-charcoal text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+        <p className="text-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
           MedNexus bridges the gap between personal injury attorneys and medical
           professionals, streamlining case coordination and improving outcomes
           for everyone involved.
@@ -97,10 +97,10 @@ export function About() {
       {/* Our Story Section */}
       <section className="max-w-7xl mx-auto mb-20">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-center">
             Our Story
           </h2>
-          <div className="space-y-6 text-charcoal text-lg leading-relaxed">
+          <div className="space-y-6 text-foreground text-lg leading-relaxed">
             <p>
               MedNexus was born from a simple observation: personal injury
               attorneys and medical providers were struggling to connect
@@ -128,10 +128,10 @@ export function About() {
       {/* Mission & Values Section */}
       <section className="max-w-7xl mx-auto mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Our Mission & Values
           </h2>
-          <p className="text-charcoal text-lg max-w-2xl mx-auto">
+          <p className="text-foreground text-lg max-w-2xl mx-auto">
             We're driven by a commitment to excellence, efficiency, and better
             outcomes for the personal injury community.
           </p>
@@ -149,12 +149,12 @@ export function About() {
                   <div className="bg-sage-green rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4 mx-auto">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-navy text-center">
+                  <CardTitle className="text-xl text-primary text-center">
                     {value.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-charcoal text-center leading-relaxed">
+                  <CardDescription className="text-foreground text-center leading-relaxed">
                     {value.description}
                   </CardDescription>
                 </CardContent>
@@ -192,10 +192,10 @@ export function About() {
       {/* Why Choose MedNexus Section */}
       <section className="max-w-7xl mx-auto mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Why Choose MedNexus
           </h2>
-          <p className="text-charcoal text-lg max-w-2xl mx-auto">
+          <p className="text-foreground text-lg max-w-2xl mx-auto">
             We've built the most trusted platform for medical-legal coordination
             with features that set us apart.
           </p>
@@ -204,14 +204,14 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column: Key Differentiators */}
           <div>
-            <h3 className="text-2xl font-bold text-navy mb-6">
+            <h3 className="text-2xl font-bold text-primary mb-6">
               What Sets Us Apart
             </h3>
             <ul className="space-y-4">
               {differentiators.map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-sage-green flex-shrink-0 mt-1" />
-                  <span className="text-charcoal text-lg">{item}</span>
+                  <span className="text-foreground text-lg">{item}</span>
                 </li>
               ))}
             </ul>
@@ -220,8 +220,8 @@ export function About() {
           {/* Right Column: Trust Badge */}
           <Card className="shadow-lg bg-gradient-to-br from-navy to-teal text-white">
             <CardHeader>
-              <div className="bg-white rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                <Heart className="w-8 h-8 text-navy" />
+              <div className="bg-card rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+                <Heart className="w-8 h-8 text-primary" />
               </div>
               <CardTitle className="text-2xl text-white text-center">
                 Built on Trust
@@ -264,7 +264,7 @@ export function About() {
               </Button>
             </Link>
             <Link to="/signup?type=provider">
-              <Button className="bg-white hover:bg-gray-100 text-navy font-semibold px-8 py-6 text-lg">
+              <Button className="bg-card hover:bg-gray-100 text-primary font-semibold px-8 py-6 text-lg">
                 Sign Up as Provider
               </Button>
             </Link>

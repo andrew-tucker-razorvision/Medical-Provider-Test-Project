@@ -25,11 +25,11 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-white shadow-lg z-1000" style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
+    <header className="fixed top-0 w-full bg-background shadow-lg z-1000 border-b border-border" style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Link to="/" className="text-2xl font-bold text-navy">
+          <Link to="/" className="text-2xl font-bold text-primary">
             MedNexus
           </Link>
         </div>
@@ -40,7 +40,7 @@ export function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="text-charcoal font-normal text-base hover:text-teal transition-colors duration-200 hover:underline"
+              className="text-foreground font-normal text-base hover:text-teal transition-colors duration-200 hover:underline"
             >
               {link.label}
             </a>
@@ -54,14 +54,14 @@ export function Header() {
             <>
               <Link
                 to="/dashboard"
-                className="flex items-center space-x-2 px-4 py-2 text-navy hover:text-teal transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 text-primary hover:text-teal transition-colors"
               >
                 <User className="w-4 h-4" />
                 <span>{user?.name}</span>
               </Link>
               <button
                 onClick={handleLogout}
-                className="flex items-center space-x-2 px-6 py-3 text-navy border-2 border-navy rounded hover:bg-navy hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 px-6 py-3 text-primary border-2 border-primary rounded hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
               >
                 <LogOut className="w-4 h-4" />
                 <span>Log Out</span>
@@ -71,7 +71,7 @@ export function Header() {
             <>
               <Link
                 to="/login"
-                className="px-6 py-3 text-navy border-2 border-navy rounded hover:bg-navy hover:text-white transition-colors duration-200"
+                className="px-6 py-3 text-primary border-2 border-primary rounded hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
               >
                 Log In
               </Link>
@@ -96,12 +96,12 @@ export function Header() {
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 hover:bg-gray-100 rounded"
+            className="p-2 hover:bg-accent rounded"
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-navy" />
+              <X className="w-6 h-6 text-primary" />
             ) : (
-              <Menu className="w-6 h-6 text-navy" />
+              <Menu className="w-6 h-6 text-primary" />
             )}
           </button>
         </div>
@@ -109,13 +109,13 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="md:hidden bg-background border-t border-border">
           <nav className="px-4 pt-2 pb-4 space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="block px-3 py-2 text-charcoal hover:bg-gray-100 rounded"
+                className="block px-3 py-2 text-foreground hover:bg-accent rounded"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
@@ -125,7 +125,7 @@ export function Header() {
               <>
                 <Link
                   to="/dashboard"
-                  className="flex items-center space-x-2 px-3 py-2 text-charcoal hover:bg-gray-100 rounded"
+                  className="flex items-center space-x-2 px-3 py-2 text-foreground hover:bg-accent rounded"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <User className="w-4 h-4" />
@@ -133,7 +133,7 @@ export function Header() {
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="flex items-center space-x-2 w-full px-3 py-2 text-charcoal hover:bg-gray-100 rounded text-left"
+                  className="flex items-center space-x-2 w-full px-3 py-2 text-foreground hover:bg-accent rounded text-left"
                 >
                   <LogOut className="w-4 h-4" />
                   <span>Log Out</span>
@@ -142,7 +142,7 @@ export function Header() {
             ) : (
               <Link
                 to="/login"
-                className="block px-3 py-2 text-charcoal hover:bg-gray-100 rounded"
+                className="block px-3 py-2 text-foreground hover:bg-accent rounded"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Log In

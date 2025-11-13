@@ -101,12 +101,12 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-card">
       {/* SECTION 1: HERO */}
       <section className="pt-8 pb-16 md:pb-20 bg-gradient-to-br from-white via-white to-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col">
           {/* Full Width Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight md:leading-tight mb-12 md:mb-16 text-center self-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight md:leading-tight mb-12 md:mb-16 text-center self-center">
             Connect Clients with Vetted Medical Experts in 24 Hours
           </h1>
 
@@ -114,7 +114,7 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start lg:items-center">
             {/* Left Side Text */}
             <div className="lg:col-span-2">
-              <p className="text-lg text-charcoal mb-6 leading-relaxed">
+              <p className="text-lg text-foreground mb-6 leading-relaxed">
                 Connect with 2,000+ vetted medical specialists instantly. Reduce coordination time by 80% and deliver better outcomes for your personal injury clients.
               </p>
 
@@ -122,15 +122,15 @@ export default function Index() {
               <div className="space-y-3 mb-8">
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base text-charcoal"><strong>Pre-vetted specialists</strong> in 50+ states (no more cold calls)</span>
+                  <span className="text-base text-foreground"><strong>Pre-vetted specialists</strong> in 50+ states (no more cold calls)</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base text-charcoal"><strong>24-hour response guarantee</strong> (clients get care fast)</span>
+                  <span className="text-base text-foreground"><strong>24-hour response guarantee</strong> (clients get care fast)</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-1" />
-                  <span className="text-base text-charcoal"><strong>All-in-one platform</strong> (scheduling, records, billing)</span>
+                  <span className="text-base text-foreground"><strong>All-in-one platform</strong> (scheduling, records, billing)</span>
                 </div>
               </div>
 
@@ -151,15 +151,15 @@ export default function Index() {
               <div className="text-center">
                 <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-3 text-sm text-gray-600">
                   <span className="flex items-center gap-1 whitespace-nowrap">
-                    ✓ <strong className="text-navy">Trusted by 500+ personal injury law firms</strong>
+                    ✓ <strong className="text-primary">Trusted by 500+ personal injury law firms</strong>
                   </span>
-                  <span className="hidden sm:inline text-gray-400">|</span>
+                  <span className="hidden sm:inline text-muted-foreground">|</span>
                   <span className="flex items-center gap-1 whitespace-nowrap">
-                    ⭐ <strong className="text-navy">4.9/5 average rating</strong>
+                    ⭐ <strong className="text-primary">4.9/5 average rating</strong>
                   </span>
-                  <span className="hidden sm:inline text-gray-400">|</span>
+                  <span className="hidden sm:inline text-muted-foreground">|</span>
                   <span className="flex items-center gap-1 whitespace-nowrap">
-                    🔒 <strong className="text-navy">HIPAA compliant</strong>
+                    🔒 <strong className="text-primary">HIPAA compliant</strong>
                   </span>
                 </div>
               </div>
@@ -178,13 +178,13 @@ export default function Index() {
       </section>
 
       {/* SECTION 2: HOW IT WORKS */}
-      <section id="how-it-works" className="py-12 md:py-20 bg-white">
+      <section id="how-it-works" className="py-12 md:py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">Get Started in 3 Simple Steps</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Get Started in 3 Simple Steps</h2>
             <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
-            <p className="text-xl text-charcoal max-w-2xl mx-auto">
+            <p className="text-xl text-foreground max-w-2xl mx-auto">
               From search to coordination in minutes, not days
             </p>
           </div>
@@ -192,7 +192,7 @@ export default function Index() {
           {/* Steps Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Step 1 */}
-            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+            <div className="bg-muted rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80"
@@ -203,15 +203,15 @@ export default function Index() {
                 <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">01</div>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Set Up Your Practice Profile</h3>
-                <p className="text-charcoal leading-relaxed">
+                <h3 className="text-2xl font-bold text-primary mb-4">Set Up Your Practice Profile</h3>
+                <p className="text-foreground leading-relaxed">
                   Attorneys and providers can sign up in 5 minutes. Create a detailed profile highlighting your specialties, experience, and service areas.
                 </p>
               </div>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+            <div className="bg-muted rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80"
@@ -222,15 +222,15 @@ export default function Index() {
                 <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">02</div>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Find the Right Specialist</h3>
-                <p className="text-charcoal leading-relaxed">
+                <h3 className="text-2xl font-bold text-primary mb-4">Find the Right Specialist</h3>
+                <p className="text-foreground leading-relaxed">
                   Use advanced search with instant results. Filter by specialty, location, and availability to find the perfect match for your case needs.
                 </p>
               </div>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-light-gray rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
+            <div className="bg-muted rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80"
@@ -241,8 +241,8 @@ export default function Index() {
                 <div className="absolute top-4 left-4 text-6xl font-bold text-white opacity-80">03</div>
               </div>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-navy mb-4">Coordinate & Close Cases Faster</h3>
-                <p className="text-charcoal leading-relaxed">
+                <h3 className="text-2xl font-bold text-primary mb-4">Coordinate & Close Cases Faster</h3>
+                <p className="text-foreground leading-relaxed">
                   All tools in one dashboard. Schedule appointments, share records securely, track progress, and close cases faster with streamlined coordination.
                 </p>
               </div>
@@ -284,7 +284,7 @@ export default function Index() {
       </section>
 
       {/* SECTION 4: FOR ATTORNEYS */}
-      <section id="for-attorneys" className="py-12 md:py-20 bg-white">
+      <section id="for-attorneys" className="py-12 md:py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image */}
@@ -299,10 +299,10 @@ export default function Index() {
             {/* Text */}
             <div className="order-1 md:order-2">
               <p className="text-teal font-bold uppercase text-sm mb-4 tracking-widest">For Attorneys</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
                 Find Trusted Medical Experts Fast
               </h2>
-              <p className="text-charcoal text-lg leading-relaxed mb-8 max-w-lg">
+              <p className="text-foreground text-lg leading-relaxed mb-8 max-w-lg">
                 Access our network of 2,000+ pre-vetted medical providers specializing in personal injury cases. Filter by specialty, location, experience, and availability. Review detailed provider profiles including credentials, case history, and peer reviews.
               </p>
 
@@ -310,15 +310,15 @@ export default function Index() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Advanced filtering and search</span>
+                  <span className="text-foreground">Advanced filtering and search</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Instant connection requests</span>
+                  <span className="text-foreground">Instant connection requests</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Integrated case management</span>
+                  <span className="text-foreground">Integrated case management</span>
                 </div>
               </div>
 
@@ -332,16 +332,16 @@ export default function Index() {
       </section>
 
       {/* SECTION 5: FOR PROVIDERS */}
-      <section id="for-providers" className="py-12 md:py-20 bg-light-gray">
+      <section id="for-providers" className="py-12 md:py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Text */}
             <div>
               <p className="text-teal font-bold uppercase text-sm mb-4 tracking-widest">For Providers</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
                 Grow Your Practice with Quality Referrals
               </h2>
-              <p className="text-charcoal text-lg leading-relaxed mb-8 max-w-lg">
+              <p className="text-foreground text-lg leading-relaxed mb-8 max-w-lg">
                 Join our exclusive network of trusted medical providers. Receive qualified referrals from personal injury attorneys across the country. Manage your availability, specialties, and service areas through an intuitive dashboard.
               </p>
 
@@ -349,15 +349,15 @@ export default function Index() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Pre-qualified case referrals</span>
+                  <span className="text-foreground">Pre-qualified case referrals</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Flexible scheduling tools</span>
+                  <span className="text-foreground">Flexible scheduling tools</span>
                 </div>
                 <div className="flex items-start">
                   <Check className="w-6 h-6 text-success mr-4 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Secure document sharing</span>
+                  <span className="text-foreground">Secure document sharing</span>
                 </div>
               </div>
 
@@ -380,18 +380,18 @@ export default function Index() {
       </section>
 
       {/* SECTION 6: TESTIMONIALS */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Trusted by Legal and Medical Professionals
             </h2>
             <div className="w-16 h-1 bg-sage-green mx-auto"></div>
           </div>
 
           {/* Testimonial Carousel */}
-          <div className="bg-light-gray p-12 rounded-xl relative">
+          <div className="bg-muted p-12 rounded-xl relative">
             {/* Testimonial Content */}
             <div className="text-center mb-8">
               {/* Stars */}
@@ -402,7 +402,7 @@ export default function Index() {
               </div>
 
               {/* Quote */}
-              <p className="text-2xl italic text-charcoal mb-8 leading-relaxed">
+              <p className="text-2xl italic text-foreground mb-8 leading-relaxed">
                 "{testimonials[currentTestimonial].quote}"
               </p>
 
@@ -412,10 +412,10 @@ export default function Index() {
               </div>
 
               {/* Author */}
-              <h3 className="text-2xl font-bold text-navy mb-2">
+              <h3 className="text-2xl font-bold text-primary mb-2">
                 {testimonials[currentTestimonial].name}
               </h3>
-              <p className="text-charcoal text-lg mb-1">
+              <p className="text-foreground text-lg mb-1">
                 {testimonials[currentTestimonial].title}
               </p>
               <p className="text-gray-600 text-base">
@@ -432,9 +432,9 @@ export default function Index() {
                       (prev - 1 + testimonials.length) % testimonials.length
                   )
                 }
-                className="p-2 hover:bg-white rounded-full transition-colors"
+                className="p-2 hover:bg-card rounded-full transition-colors"
               >
-                <ChevronLeft className="w-6 h-6 text-navy" />
+                <ChevronLeft className="w-6 h-6 text-primary" />
               </button>
 
               {/* Dots */}
@@ -456,9 +456,9 @@ export default function Index() {
                 onClick={() =>
                   setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
                 }
-                className="p-2 hover:bg-white rounded-full transition-colors"
+                className="p-2 hover:bg-card rounded-full transition-colors"
               >
-                <ChevronRightIcon className="w-6 h-6 text-navy" />
+                <ChevronRightIcon className="w-6 h-6 text-primary" />
               </button>
             </div>
           </div>
@@ -466,26 +466,26 @@ export default function Index() {
       </section>
 
       {/* SECTION 7: FAQ */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Frequently Asked Questions
             </h2>
             <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
-            <p className="text-xl text-charcoal">
+            <p className="text-xl text-foreground">
               Everything you need to know about getting started
             </p>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-light-gray rounded-lg overflow-hidden">
+              <div key={index} className="bg-muted rounded-lg overflow-hidden">
                 <button
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
                   className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-100 transition-colors duration-200"
                 >
-                  <span className="text-lg font-semibold text-navy pr-8">
+                  <span className="text-lg font-semibold text-primary pr-8">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -496,14 +496,14 @@ export default function Index() {
                 </button>
                 {openFAQ === index && (
                   <div className="px-6 pb-5">
-                    <p className="text-charcoal leading-relaxed">{faq.answer}</p>
+                    <p className="text-foreground leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
             ))}
           </div>
 
-          <p className="text-center text-charcoal mt-12">
+          <p className="text-center text-foreground mt-12">
             Still have questions?{" "}
             <Link to="/contact" className="text-teal font-semibold hover:underline">
               Contact our team
@@ -513,14 +513,14 @@ export default function Index() {
       </section>
 
       {/* SECTION 8: PRICING PREVIEW */}
-      <section className="py-12 md:py-20 bg-light-gray">
+      <section className="py-12 md:py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Simple, Transparent Pricing
             </h2>
             <div className="w-16 h-1 bg-sage-green mx-auto mb-6"></div>
-            <p className="text-xl text-charcoal max-w-2xl mx-auto">
+            <p className="text-xl text-foreground max-w-2xl mx-auto">
               Choose the plan that fits your practice • No long-term contracts
             </p>
           </div>
@@ -528,33 +528,33 @@ export default function Index() {
           {/* Pricing Cards - Two Column */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* For Attorneys */}
-            <div className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-card p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <Briefcase className="w-8 h-8 text-legal-gold" />
-                <h3 className="text-3xl font-bold text-navy">For Attorneys</h3>
+                <h3 className="text-3xl font-bold text-primary">For Attorneys</h3>
               </div>
               <div className="mb-6">
-                <p className="text-lg text-charcoal mb-4">
+                <p className="text-lg text-foreground mb-4">
                   Connect with vetted medical experts instantly for your personal injury cases
                 </p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-lg text-charcoal">Plans starting at</span>
-                  <span className="text-4xl font-bold text-navy">$99</span>
-                  <span className="text-lg text-charcoal">/month</span>
+                  <span className="text-lg text-foreground">Plans starting at</span>
+                  <span className="text-4xl font-bold text-primary">$99</span>
+                  <span className="text-lg text-foreground">/month</span>
                 </div>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Access to 2,000+ medical providers</span>
+                  <span className="text-foreground">Access to 2,000+ medical providers</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Advanced search and filtering</span>
+                  <span className="text-foreground">Advanced search and filtering</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Case coordination tools</span>
+                  <span className="text-foreground">Case coordination tools</span>
                 </li>
               </ul>
               <Link
@@ -566,32 +566,32 @@ export default function Index() {
             </div>
 
             {/* For Providers */}
-            <div className="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-card p-10 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <Stethoscope className="w-8 h-8 text-medical-teal" />
-                <h3 className="text-3xl font-bold text-navy">For Providers</h3>
+                <h3 className="text-3xl font-bold text-primary">For Providers</h3>
               </div>
               <div className="mb-6">
-                <p className="text-lg text-charcoal mb-4">
+                <p className="text-lg text-foreground mb-4">
                   Grow your practice by connecting with attorneys who need your expertise
                 </p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-lg text-charcoal">Plans starting at</span>
-                  <span className="text-4xl font-bold text-navy">Free</span>
+                  <span className="text-lg text-foreground">Plans starting at</span>
+                  <span className="text-4xl font-bold text-primary">Free</span>
                 </div>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Reach 500+ law firms instantly</span>
+                  <span className="text-foreground">Reach 500+ law firms instantly</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Professional profile showcase</span>
+                  <span className="text-foreground">Professional profile showcase</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-success mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-charcoal">Direct case opportunities</span>
+                  <span className="text-foreground">Direct case opportunities</span>
                 </li>
               </ul>
               <Link
@@ -603,7 +603,7 @@ export default function Index() {
             </div>
           </div>
 
-          <p className="text-center text-charcoal mt-12">
+          <p className="text-center text-foreground mt-12">
             All plans include 24-hour response guarantee and HIPAA-compliant platform • 14-day free trial •{" "}
             <Link to="/pricing" className="text-teal font-semibold hover:underline">
               See full pricing details
@@ -628,10 +628,10 @@ export default function Index() {
           {/* CTA Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Attorney Card */}
-            <div className="bg-white p-12 rounded-lg text-center">
-              <Briefcase className="w-12 h-12 text-navy mx-auto mb-6" />
-              <h3 className="text-3xl font-bold text-navy mb-4">For Attorneys</h3>
-              <p className="text-charcoal text-lg mb-8">
+            <div className="bg-card p-12 rounded-lg text-center">
+              <Briefcase className="w-12 h-12 text-primary mx-auto mb-6" />
+              <h3 className="text-3xl font-bold text-primary mb-4">For Attorneys</h3>
+              <p className="text-foreground text-lg mb-8">
                 Access our vetted provider network and streamline case coordination
               </p>
               <Link
@@ -643,10 +643,10 @@ export default function Index() {
             </div>
 
             {/* Provider Card */}
-            <div className="bg-white p-12 rounded-lg text-center">
+            <div className="bg-card p-12 rounded-lg text-center">
               <Plus className="w-12 h-12 text-teal mx-auto mb-6" />
-              <h3 className="text-3xl font-bold text-navy mb-4">For Providers</h3>
-              <p className="text-charcoal text-lg mb-8">
+              <h3 className="text-3xl font-bold text-primary mb-4">For Providers</h3>
+              <p className="text-foreground text-lg mb-8">
                 Join our exclusive network and receive quality referrals from personal injury attorneys
               </p>
               <Link

@@ -89,14 +89,14 @@ export function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-light-gray pt-32 pb-16 px-4">
+    <div className="min-h-screen bg-muted pt-32 pb-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Get In Touch
           </h1>
-          <p className="text-charcoal text-lg max-w-2xl mx-auto">
+          <p className="text-foreground text-lg max-w-2xl mx-auto">
             Have questions? We'd love to hear from you. Send us a message and
             we'll respond as soon as possible.
           </p>
@@ -108,7 +108,7 @@ export function Contact() {
           <div className="lg:col-span-2">
             <Card className="shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-navy">
+                <CardTitle className="text-2xl text-primary">
                   Send Us a Message
                 </CardTitle>
                 <CardDescription>
@@ -123,12 +123,12 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label
                       htmlFor="name"
-                      className="text-sm font-semibold text-navy uppercase tracking-wide"
+                      className="text-sm font-semibold text-primary uppercase tracking-wide"
                     >
                       Full Name *
                     </Label>
                     <div className="relative">
-                      <User className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                      <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="name"
                         type="text"
@@ -149,12 +149,12 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label
                       htmlFor="email"
-                      className="text-sm font-semibold text-navy uppercase tracking-wide"
+                      className="text-sm font-semibold text-primary uppercase tracking-wide"
                     >
                       Email Address *
                     </Label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                      <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="email"
                         type="email"
@@ -175,12 +175,12 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label
                       htmlFor="phone"
-                      className="text-sm font-semibold text-navy uppercase tracking-wide"
+                      className="text-sm font-semibold text-primary uppercase tracking-wide"
                     >
                       Phone Number (Optional)
                     </Label>
                     <div className="relative">
-                      <Phone className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                      <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="phone"
                         type="tel"
@@ -196,7 +196,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label
                       htmlFor="userType"
-                      className="text-sm font-semibold text-navy uppercase tracking-wide"
+                      className="text-sm font-semibold text-primary uppercase tracking-wide"
                     >
                       I am a... *
                     </Label>
@@ -228,12 +228,12 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label
                       htmlFor="subject"
-                      className="text-sm font-semibold text-navy uppercase tracking-wide"
+                      className="text-sm font-semibold text-primary uppercase tracking-wide"
                     >
                       Subject *
                     </Label>
                     <div className="relative">
-                      <Tag className="absolute left-3 top-3 h-4 w-4 text-gray-400 z-10" />
+                      <Tag className="absolute left-3 top-3 h-4 w-4 text-muted-foreground z-10" />
                       <Select
                         onValueChange={(value) => setValue("subject", value)}
                         disabled={isLoading}
@@ -269,12 +269,12 @@ export function Contact() {
                   <div className="space-y-2">
                     <Label
                       htmlFor="message"
-                      className="text-sm font-semibold text-navy uppercase tracking-wide"
+                      className="text-sm font-semibold text-primary uppercase tracking-wide"
                     >
                       Message *
                     </Label>
                     <div className="relative">
-                      <MessageSquare className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                      <MessageSquare className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Textarea
                         id="message"
                         placeholder="Tell us how we can help you..."
@@ -314,7 +314,7 @@ export function Contact() {
           <div className="lg:col-span-1">
             <Card className="shadow-lg">
               <CardHeader>
-                <CardTitle className="text-xl text-navy">
+                <CardTitle className="text-xl text-primary">
                   Contact Information
                 </CardTitle>
                 <CardDescription>
@@ -327,10 +327,10 @@ export function Contact() {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-teal mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-semibold text-navy uppercase tracking-wide mb-1">
+                    <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-1">
                       Address
                     </p>
-                    <p className="text-charcoal text-sm">
+                    <p className="text-foreground text-sm">
                       123 Medical Plaza
                       <br />
                       Suite 500
@@ -344,12 +344,12 @@ export function Contact() {
                 <div className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-teal mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-semibold text-navy uppercase tracking-wide mb-1">
+                    <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-1">
                       Phone
                     </p>
                     <a
                       href="tel:+15551234567"
-                      className="text-charcoal text-sm hover:text-teal transition-colors"
+                      className="text-foreground text-sm hover:text-teal transition-colors"
                     >
                       (555) 123-4567
                     </a>
@@ -360,12 +360,12 @@ export function Contact() {
                 <div className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-teal mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-semibold text-navy uppercase tracking-wide mb-1">
+                    <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-1">
                       Email
                     </p>
                     <a
                       href="mailto:support@mednexus.com"
-                      className="text-charcoal text-sm hover:text-teal transition-colors"
+                      className="text-foreground text-sm hover:text-teal transition-colors"
                     >
                       support@mednexus.com
                     </a>
@@ -376,10 +376,10 @@ export function Contact() {
                 <div className="flex items-start space-x-3">
                   <Clock className="w-5 h-5 text-teal mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-sm font-semibold text-navy uppercase tracking-wide mb-1">
+                    <p className="text-sm font-semibold text-primary uppercase tracking-wide mb-1">
                       Business Hours
                     </p>
-                    <p className="text-charcoal text-sm">
+                    <p className="text-foreground text-sm">
                       Monday - Friday
                       <br />
                       9:00 AM - 6:00 PM PST
@@ -389,7 +389,7 @@ export function Contact() {
 
                 {/* Divider */}
                 <div className="border-t border-gray-200 pt-6">
-                  <p className="text-sm text-charcoal">
+                  <p className="text-sm text-foreground">
                     For urgent matters, please call us directly during business
                     hours. We typically respond to all inquiries within 24
                     hours.

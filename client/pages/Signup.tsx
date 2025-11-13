@@ -169,14 +169,14 @@ export function Signup() {
   const US_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"];
 
   return (
-    <div className="min-h-screen bg-light-gray pt-32 pb-16">
+    <div className="min-h-screen bg-muted pt-32 pb-16">
       {/* Hero */}
       <section className="py-8 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Create Your MedNexus Account
           </h1>
-          <p className="text-lg text-charcoal mb-6">
+          <p className="text-lg text-foreground mb-6">
             Join 500+ law firms and 2,000+ medical providers
           </p>
           <div className="h-1 w-24 bg-sage-green mx-auto"></div>
@@ -211,7 +211,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="fullName">Full Name *</Label>
                         <div className="relative">
-                          <User className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="fullName"
                             {...attorneyForm.register("fullName")}
@@ -226,7 +226,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="email">Email *</Label>
                         <div className="relative">
-                          <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="email"
                             type="email"
@@ -245,7 +245,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="password">Password *</Label>
                         <div className="relative">
-                          <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="password"
                             type="password"
@@ -261,7 +261,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="confirmPassword">Confirm Password *</Label>
                         <div className="relative">
-                          <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="confirmPassword"
                             type="password"
@@ -280,7 +280,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="phone">Phone</Label>
                         <div className="relative">
-                          <Phone className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="phone"
                             {...attorneyForm.register("phone")}
@@ -292,7 +292,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="firmName">Law Firm Name *</Label>
                         <div className="relative">
-                          <Building className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Building className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="firmName"
                             {...attorneyForm.register("firmName")}
@@ -310,7 +310,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="barNumber">State Bar Number *</Label>
                         <div className="relative">
-                          <Award className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Award className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="barNumber"
                             {...attorneyForm.register("barNumber")}
@@ -325,7 +325,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="statesOfPractice">States of Practice * (comma-separated)</Label>
                         <div className="relative">
-                          <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="statesOfPractice"
                             {...attorneyForm.register("statesOfPractice")}
@@ -393,7 +393,7 @@ export function Signup() {
                     <Button type="submit" className="w-full bg-sage-green hover:bg-sage-green/90" size="lg" disabled={isLoading}>
                       {isLoading ? "Creating Account..." : "Create Account"}
                     </Button>
-                    <div className="text-center text-sm text-charcoal">
+                    <div className="text-center text-sm text-foreground">
                       14-day free trial • No credit card required • HIPAA compliant
                     </div>
                     <div className="text-center text-sm">
@@ -417,7 +417,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="fullName">Full Name *</Label>
                         <div className="relative">
-                          <User className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="fullName"
                             {...providerForm.register("fullName")}
@@ -432,7 +432,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="email">Email *</Label>
                         <div className="relative">
-                          <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="email"
                             type="email"
@@ -451,7 +451,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="password">Password *</Label>
                         <div className="relative">
-                          <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="password"
                             type="password"
@@ -467,7 +467,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="confirmPassword">Confirm Password *</Label>
                         <div className="relative">
-                          <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="confirmPassword"
                             type="password"
@@ -486,7 +486,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="phone">Phone *</Label>
                         <div className="relative">
-                          <Phone className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="phone"
                             {...providerForm.register("phone")}
@@ -501,7 +501,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="practiceName">Practice Name *</Label>
                         <div className="relative">
-                          <Building className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Building className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="practiceName"
                             {...providerForm.register("practiceName")}
@@ -540,7 +540,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="licenseNumber">License Number *</Label>
                         <div className="relative">
-                          <Award className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <Award className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="licenseNumber"
                             {...providerForm.register("licenseNumber")}
@@ -558,7 +558,7 @@ export function Signup() {
                       <div>
                         <Label htmlFor="statesLicensed">States Licensed * (comma-separated)</Label>
                         <div className="relative">
-                          <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                          <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                           <Input
                             id="statesLicensed"
                             {...providerForm.register("statesLicensed")}
@@ -621,7 +621,7 @@ export function Signup() {
                     <Button type="submit" className="w-full bg-sage-green hover:bg-sage-green/90" size="lg" disabled={isLoading}>
                       {isLoading ? "Creating Account..." : "Create Account"}
                     </Button>
-                    <div className="text-center text-sm text-charcoal">
+                    <div className="text-center text-sm text-foreground">
                       14-day free trial • No credit card required • HIPAA compliant
                     </div>
                     <div className="text-center text-sm">

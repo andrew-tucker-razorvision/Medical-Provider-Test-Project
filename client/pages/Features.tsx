@@ -142,14 +142,14 @@ export function Features() {
   ];
 
   return (
-    <div className="min-h-screen bg-light-gray pt-32 pb-16">
+    <div className="min-h-screen bg-muted pt-32 pb-16">
       {/* Hero Section */}
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             Powerful Features for Seamless Medical-Legal Coordination
           </h1>
-          <p className="text-lg md:text-xl text-charcoal mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-foreground mb-8 leading-relaxed">
             MedNexus brings together attorneys and medical providers with enterprise-grade tools designed
             specifically for efficient case coordination and secure collaboration.
           </p>
@@ -161,10 +161,10 @@ export function Features() {
       <section className="py-12 md:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Everything You Need in One Platform
             </h2>
-            <p className="text-lg text-charcoal max-w-3xl mx-auto">
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
               Built for professionals who demand efficiency, security, and reliability.
             </p>
           </div>
@@ -175,16 +175,16 @@ export function Features() {
               return (
                 <Card
                   key={index}
-                  className="bg-white hover:shadow-xl transition-shadow duration-300 border-none"
+                  className="bg-card hover:shadow-xl transition-shadow duration-300 border-none"
                 >
                   <CardHeader>
                     <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mb-4">
                       <Icon className="w-6 h-6 text-teal" />
                     </div>
-                    <CardTitle className="text-xl text-navy">{feature.title}</CardTitle>
+                    <CardTitle className="text-xl text-primary">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-charcoal">{feature.description}</p>
+                    <p className="text-foreground">{feature.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -194,16 +194,16 @@ export function Features() {
       </section>
 
       {/* For Attorneys Section */}
-      <section className="py-12 md:py-20 px-4 bg-white">
+      <section className="py-12 md:py-20 px-4 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-navy rounded-full mb-4">
               <Briefcase className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Built for Legal Professionals
             </h2>
-            <p className="text-lg text-charcoal max-w-3xl mx-auto">
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
               Streamline your medical coordination with tools designed specifically for attorneys.
             </p>
           </div>
@@ -219,8 +219,8 @@ export function Features() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-navy mb-2">{feature.title}</h3>
-                    <p className="text-charcoal">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">{feature.title}</h3>
+                    <p className="text-foreground">{feature.description}</p>
                   </div>
                 </div>
               );
@@ -236,10 +236,10 @@ export function Features() {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-teal rounded-full mb-4">
               <Stethoscope className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Designed for Medical Providers
             </h2>
-            <p className="text-lg text-charcoal max-w-3xl mx-auto">
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
               Grow your practice with direct access to attorneys who need your expertise.
             </p>
           </div>
@@ -255,8 +255,8 @@ export function Features() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-navy mb-2">{feature.title}</h3>
-                    <p className="text-charcoal">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-primary mb-2">{feature.title}</h3>
+                    <p className="text-foreground">{feature.description}</p>
                   </div>
                 </div>
               );
@@ -266,13 +266,13 @@ export function Features() {
       </section>
 
       {/* How It Works Process Flow */}
-      <section className="py-12 md:py-20 px-4 bg-white">
+      <section className="py-12 md:py-20 px-4 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               How It Works
             </h2>
-            <p className="text-lg text-charcoal max-w-3xl mx-auto">
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
               Get started in minutes with our simple, streamlined process.
             </p>
           </div>
@@ -283,8 +283,8 @@ export function Features() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-sage-green text-white rounded-full font-bold text-xl mb-4">
                   {step.number}
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">{step.title}</h3>
-                <p className="text-charcoal">{step.description}</p>
+                <h3 className="text-xl font-bold text-primary mb-3">{step.title}</h3>
+                <p className="text-foreground">{step.description}</p>
               </div>
             ))}
           </div>
@@ -296,7 +296,7 @@ export function Features() {
         <div className="max-w-5xl mx-auto">
           <Card className="bg-gradient-to-br from-navy to-teal text-white border-none">
             <CardHeader className="text-center pb-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4 mx-auto">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-card/20 rounded-full mb-4 mx-auto">
                 <Lock className="w-8 h-8 text-white" />
               </div>
               <CardTitle className="text-3xl md:text-4xl text-white mb-4">
@@ -353,10 +353,10 @@ export function Features() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Ready to Experience These Features?
           </h2>
-          <p className="text-lg text-charcoal mb-8">
+          <p className="text-lg text-foreground mb-8">
             Join thousands of legal and medical professionals who trust MedNexus for seamless coordination.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
