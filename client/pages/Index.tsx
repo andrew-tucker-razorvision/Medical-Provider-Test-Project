@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   ChevronRight,
   Check,
@@ -107,9 +108,12 @@ export default function Index() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
-                <button className="px-8 py-3 bg-sage-green text-white font-semibold rounded-lg hover:bg-sage-green-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                <Link
+                  to="/signup"
+                  className="px-8 py-3 bg-sage-green text-white font-semibold rounded-lg hover:bg-sage-green-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                >
                   Get Started Free
-                </button>
+                </Link>
                 <a href="#" className="flex items-center text-teal font-semibold hover:underline group">
                   <Play className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
                   Watch 2-min demo
@@ -441,9 +445,12 @@ export default function Index() {
               <p className="text-charcoal text-lg mb-8">
                 Access our vetted provider network and streamline case coordination
               </p>
-              <button className="w-full bg-sage-green text-white font-semibold py-4 px-6 rounded-lg hover:bg-sage-green-600 transition-colors duration-300">
+              <Link
+                to="/signup?type=attorney"
+                className="block w-full bg-sage-green text-white font-semibold py-4 px-6 rounded-lg hover:bg-sage-green-600 transition-colors duration-300"
+              >
                 Sign Up as Attorney
-              </button>
+              </Link>
             </div>
 
             {/* Provider Card */}
@@ -453,9 +460,12 @@ export default function Index() {
               <p className="text-charcoal text-lg mb-8">
                 Join our exclusive network and receive quality referrals from personal injury attorneys
               </p>
-              <button className="w-full bg-teal text-white font-semibold py-4 px-6 rounded-lg hover:bg-teal-700 transition-colors duration-300">
+              <Link
+                to="/signup?type=provider"
+                className="block w-full bg-teal text-white font-semibold py-4 px-6 rounded-lg hover:bg-teal-700 transition-colors duration-300"
+              >
                 Sign Up as Provider
-              </button>
+              </Link>
             </div>
           </div>
         </div>

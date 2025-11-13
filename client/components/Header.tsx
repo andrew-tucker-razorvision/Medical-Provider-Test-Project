@@ -73,18 +73,24 @@ export function Header() {
               >
                 Log In
               </Link>
-              <button className="px-6 py-3 bg-sage-green text-white rounded hover:bg-sage-green-600 transition-colors duration-200 font-semibold">
+              <Link
+                to="/signup"
+                className="px-6 py-3 bg-sage-green text-white rounded hover:bg-sage-green-600 transition-colors duration-200 font-semibold"
+              >
                 Sign Up
-              </button>
+              </Link>
             </>
           )}
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-4">
-          <button className="px-4 py-2 bg-sage-green text-white rounded text-sm font-semibold hover:bg-sage-green-600 transition-colors duration-200">
+          <Link
+            to="/signup"
+            className="px-4 py-2 bg-sage-green text-white rounded text-sm font-semibold hover:bg-sage-green-600 transition-colors duration-200"
+          >
             Sign Up
-          </button>
+          </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 hover:bg-gray-100 rounded"

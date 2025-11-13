@@ -360,12 +360,18 @@ export function Features() {
             Join thousands of legal and medical professionals who trust AcciLink for seamless coordination.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-sage-green text-white rounded-lg hover:bg-sage-green-600 transition-colors duration-200 font-semibold text-lg">
+            <Link
+              to="/signup?type=attorney"
+              className="px-8 py-4 bg-sage-green text-white rounded-lg hover:bg-sage-green-600 transition-colors duration-200 font-semibold text-lg text-center"
+            >
               Sign Up as Attorney
-            </button>
-            <button className="px-8 py-4 bg-sage-green text-white rounded-lg hover:bg-sage-green-600 transition-colors duration-200 font-semibold text-lg">
+            </Link>
+            <Link
+              to="/signup?type=provider"
+              className="px-8 py-4 bg-sage-green text-white rounded-lg hover:bg-sage-green-600 transition-colors duration-200 font-semibold text-lg text-center"
+            >
               Sign Up as Provider
-            </button>
+            </Link>
           </div>
         </div>
       </section>
