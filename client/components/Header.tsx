@@ -17,9 +17,8 @@ export function Header() {
   };
 
   const navLinks = [
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "For Attorneys", href: "#for-attorneys" },
-    { label: "For Providers", href: "#for-providers" },
+    { label: "Features", href: "#how-it-works" },
+    { label: "Pricing", href: "/pricing" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
