@@ -71,7 +71,14 @@
       "Bash(npx tsx:*)",
       "Bash(/c/Program\\ Files/GitHub\\ CLI/gh.exe issue list:*)",
       "Bash(/c/Program\\ Files/GitHub\\ CLI/gh.exe pr:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(lsof:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(node:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
