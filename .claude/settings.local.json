@@ -78,7 +78,13 @@
       "Bash(cat:*)",
       "Bash(find:*)",
       "Bash(node:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(git branch:*)",
+      "Bash(git init:*)",
+      "Bash(/c/Program Files/GitHub CLI/gh.exe repo create:*)",
+      "Bash(/c/Program Files/GitHub CLI/gh.exe api -X PATCH /repos/razorvision/project-intake-template -f is_template=true)",
+      "Bash(/c/Program\\ Files/GitHub\\ CLI/gh.exe api:*)",
+      "Bash(/c/Program Files/GitHub CLI/gh.exe issue list --state open)"
     ],
     "deny": [],
     "ask": []
